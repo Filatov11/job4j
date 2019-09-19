@@ -1,0 +1,145 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------------< ru.job4j:job4j >---------------------------
+[INFO] Building job4j 3.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ job4j ---
+[INFO] Deleting /home/aster/IdeaProjects/job4j/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ job4j ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ job4j ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 17 source files to /home/aster/IdeaProjects/job4j/target/classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/FitTest.java:[2,17] package org.junit does not exist
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/FitTest.java:[3,17] package org.junit does not exist
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/convert/ConverterTest.java:[2,17] package org.junit does not exist
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/convert/ConverterTest.java:[3,17] package org.junit does not exist
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/condition/PointTest.java:[2,32] package com.sun.tools.javac.util does not exist
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/condition/PointTest.java:[3,17] package org.junit does not exist
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/condition/PointTest.java:[4,17] package org.junit does not exist
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/FitTest.java:[6,6] cannot find symbol
+  symbol:   class Test
+  location: class ru.job4j.FitTest
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/FitTest.java:[14,6] cannot find symbol
+  symbol:   class Test
+  location: class ru.job4j.FitTest
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/convert/ConverterTest.java:[5,6] cannot find symbol
+  symbol:   class Test
+  location: class ru.job4j.convert.ConverterTest
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/convert/ConverterTest.java:[13,6] cannot find symbol
+  symbol:   class Test
+  location: class ru.job4j.convert.ConverterTest
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/convert/ConverterTest.java:[20,6] cannot find symbol
+  symbol:   class Test
+  location: class ru.job4j.convert.ConverterTest
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/convert/ConverterTest.java:[27,6] cannot find symbol
+  symbol:   class Test
+  location: class ru.job4j.convert.ConverterTest
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/condition/PointTest.java:[6,6] cannot find symbol
+  symbol:   class Test
+  location: class ru.job4j.condition.PointTest
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/condition/PointTest.java:[16,6] cannot find symbol
+  symbol:   class Test
+  location: class ru.job4j.condition.PointTest
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/FitTest.java:[11,9] cannot find symbol
+  symbol:   variable Assert
+  location: class ru.job4j.FitTest
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/FitTest.java:[19,9] cannot find symbol
+  symbol:   variable Assert
+  location: class ru.job4j.FitTest
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/convert/ConverterTest.java:[10,9] cannot find symbol
+  symbol:   variable Assert
+  location: class ru.job4j.convert.ConverterTest
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/convert/ConverterTest.java:[18,9] cannot find symbol
+  symbol:   variable Assert
+  location: class ru.job4j.convert.ConverterTest
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/convert/ConverterTest.java:[25,9] cannot find symbol
+  symbol:   variable Assert
+  location: class ru.job4j.convert.ConverterTest
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/convert/ConverterTest.java:[32,9] cannot find symbol
+  symbol:   variable Assert
+  location: class ru.job4j.convert.ConverterTest
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/condition/PointTest.java:[14,9] cannot find symbol
+  symbol:   variable Assert
+  location: class ru.job4j.condition.PointTest
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/condition/PointTest.java:[24,9] cannot find symbol
+  symbol:   variable Assert
+  location: class ru.job4j.condition.PointTest
+[INFO] 23 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 6.494 s
+[INFO] Finished at: 2019-09-17T01:04:34+03:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project job4j: Compilation failure: Compilation failure: 
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/FitTest.java:[2,17] package org.junit does not exist
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/FitTest.java:[3,17] package org.junit does not exist
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/convert/ConverterTest.java:[2,17] package org.junit does not exist
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/convert/ConverterTest.java:[3,17] package org.junit does not exist
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/condition/PointTest.java:[2,32] package com.sun.tools.javac.util does not exist
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/condition/PointTest.java:[3,17] package org.junit does not exist
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/condition/PointTest.java:[4,17] package org.junit does not exist
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/FitTest.java:[6,6] cannot find symbol
+[ERROR]   symbol:   class Test
+[ERROR]   location: class ru.job4j.FitTest
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/FitTest.java:[14,6] cannot find symbol
+[ERROR]   symbol:   class Test
+[ERROR]   location: class ru.job4j.FitTest
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/convert/ConverterTest.java:[5,6] cannot find symbol
+[ERROR]   symbol:   class Test
+[ERROR]   location: class ru.job4j.convert.ConverterTest
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/convert/ConverterTest.java:[13,6] cannot find symbol
+[ERROR]   symbol:   class Test
+[ERROR]   location: class ru.job4j.convert.ConverterTest
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/convert/ConverterTest.java:[20,6] cannot find symbol
+[ERROR]   symbol:   class Test
+[ERROR]   location: class ru.job4j.convert.ConverterTest
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/convert/ConverterTest.java:[27,6] cannot find symbol
+[ERROR]   symbol:   class Test
+[ERROR]   location: class ru.job4j.convert.ConverterTest
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/condition/PointTest.java:[6,6] cannot find symbol
+[ERROR]   symbol:   class Test
+[ERROR]   location: class ru.job4j.condition.PointTest
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/condition/PointTest.java:[16,6] cannot find symbol
+[ERROR]   symbol:   class Test
+[ERROR]   location: class ru.job4j.condition.PointTest
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/FitTest.java:[11,9] cannot find symbol
+[ERROR]   symbol:   variable Assert
+[ERROR]   location: class ru.job4j.FitTest
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/FitTest.java:[19,9] cannot find symbol
+[ERROR]   symbol:   variable Assert
+[ERROR]   location: class ru.job4j.FitTest
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/convert/ConverterTest.java:[10,9] cannot find symbol
+[ERROR]   symbol:   variable Assert
+[ERROR]   location: class ru.job4j.convert.ConverterTest
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/convert/ConverterTest.java:[18,9] cannot find symbol
+[ERROR]   symbol:   variable Assert
+[ERROR]   location: class ru.job4j.convert.ConverterTest
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/convert/ConverterTest.java:[25,9] cannot find symbol
+[ERROR]   symbol:   variable Assert
+[ERROR]   location: class ru.job4j.convert.ConverterTest
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/convert/ConverterTest.java:[32,9] cannot find symbol
+[ERROR]   symbol:   variable Assert
+[ERROR]   location: class ru.job4j.convert.ConverterTest
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/condition/PointTest.java:[14,9] cannot find symbol
+[ERROR]   symbol:   variable Assert
+[ERROR]   location: class ru.job4j.condition.PointTest
+[ERROR] /home/aster/IdeaProjects/job4j/src/main/java/condition/PointTest.java:[24,9] cannot find symbol
+[ERROR]   symbol:   variable Assert
+[ERROR]   location: class ru.job4j.condition.PointTest
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
