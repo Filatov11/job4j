@@ -1,4 +1,4 @@
-package ru.job.condition;
+package ru.job4j.condition;
 
 import ru.job4j.condition.Driver;
 
