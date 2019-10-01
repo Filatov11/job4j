@@ -12,28 +12,19 @@ public class EndsWith {
             maxLength = word.length;
             minLength = post.length;
         }
-        if (word.length > post.length) {
-            for (int i = (maxLength -1); i > (minLength); i--) {
-                if (word[(i )] == post[( i -(maxLength-minLength) )]) {
-                    result = true;
-                } else {
-                    result = false;
-                    break;
-                }
+
+        for (int i = 0;  i < (minLength); i++)  {
+            if (word[(word.length - 1 - i)] != post[(post.length - i - 1)]) {
+
+                // for (int i = 0;  i < (minLength); i++) {
+                //    if (word[(i )] == post[( i -(maxLength-minLength) )]) {
+                result = true;
+            } else {
+                result = false;
+                break;
             }
-            return result;
-        } else {
-            for (int i = (maxLength -1); i > (minLength); i--) {
-                if (post[(i )] == word[( i -(maxLength-minLength) )]) {
-                    result = true;
-                } else {
-                    result = false;
-                    break;
-                }
-            }
-            return result;
         }
-
-
+        return result;
     }
 }
+
