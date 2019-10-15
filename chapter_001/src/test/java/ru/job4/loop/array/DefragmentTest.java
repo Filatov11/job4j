@@ -1,8 +1,10 @@
 package ru.job4.loop.array;
+
 import org.junit.Test;
+import ru.job4j.array.Defragment;
+
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
-import  ru.job4j.array.Defragment;
 
 public class DefragmentTest {
     @Test

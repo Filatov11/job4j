@@ -13,7 +13,7 @@ public class EndsWith {
             minLength = post.length;
         }
 
-        for (int i = 0;  i < (minLength); i++)  {
+        for (int i = 0; i < (minLength); i++) {
             if (word[(word.length - 1 - i)] != post[(post.length - i - 1)]) {
 
                 // for (int i = 0;  i < (minLength); i++) {

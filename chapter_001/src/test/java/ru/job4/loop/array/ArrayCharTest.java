@@ -1,8 +1,11 @@
 package ru.job4.loop.array;
+
 import org.junit.Test;
+import ru.job4j.array.ArrayChar;
+
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
-import  ru.job4j.array.ArrayChar;
+
 public class ArrayCharTest {
     @Test
     public void whenStartWithPrefixThenTrue() {
@@ -16,7 +19,7 @@ public class ArrayCharTest {
     public void whenNotStartWithPrefixThenFalse() {
         char[] word = {'H', 'e', 'l', 'l', 'o'};
         char[] pref = {'H', 'i'};
-        boolean result =ArrayChar.startsW(word, pref);
+        boolean result = ArrayChar.startsW(word, pref);
         assertThat(result, is(false));
     }
 }

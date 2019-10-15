@@ -1,9 +1,9 @@
 package ru.job4.loop;
+
 import org.junit.Assert;
 import org.junit.Test;
 import ru.job4j.loop.Factorial;
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
+
 public class FactorialTest {
     @Test
     public void whenCalculateFactorialForFiveThenOneHundreedTwenty() {

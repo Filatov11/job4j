@@ -1,8 +1,11 @@
 package ru.job4.loop.array;
-import ru.job4j.array.Matrix;
+
 import org.junit.Test;
+import ru.job4j.array.Matrix;
+
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
+
 public class MatrixTest {
     @Test
     public void when2on2() {

@@ -8,9 +8,14 @@ public class MatrixCheck {
                 char sign = board[row][cell];
                 System.out.print(sign);
                 //for () { проверить последовательность.
-                for ( int i = 0 ; i < (board.length -1); i++) {
-                    if (board[i][i] != 'X') { result = false;  continue;}
-                      else  { result = true; break; }
+                for (int i = 0; i < (board.length - 1); i++) {
+                    if (board[i][i] != 'X') {
+                        result = false;
+                        continue;
+                    } else {
+                        result = true;
+                        break;
+                    }
                 }
             }
             //System.out.println( result);

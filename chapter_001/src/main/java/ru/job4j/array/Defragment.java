@@ -7,13 +7,13 @@ public class Defragment {
             if (cell == null) {
                 int ind = index;
                 String tempString = null;
-                while ((ind < array.length-1) && (tempString == null)) {
+                while ((ind < array.length - 1) && (tempString == null)) {
                     tempString = array[ind];
-                    array[ind] = array[ind+1];
-                    array[ind+1] = tempString;
-                    ind ++;
+                    array[ind] = array[ind + 1];
+                    array[ind + 1] = tempString;
+                    ind++;
                     //  if (tempString == null)
-              }
+                }
 
 
                 // переместить первую не null ячейку

@@ -3,8 +3,8 @@ package ru.job4j.condition;
 public class TrgArea {
     public static double area(double a, double b, double c) {
         double halfPerim, triangleArea;
-        halfPerim = (a + b + c)/2;
-        triangleArea = Math.sqrt(halfPerim*(halfPerim-a)*(halfPerim-b)*(halfPerim-c));
+        halfPerim = (a + b + c) / 2;
+        triangleArea = Math.sqrt(halfPerim * (halfPerim - a) * (halfPerim - b) * (halfPerim - c));
         return triangleArea;
     }
 

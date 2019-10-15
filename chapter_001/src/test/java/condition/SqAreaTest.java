@@ -1,12 +1,13 @@
 package condition;
+
 import org.junit.Test;
-import ru.job4j.condition.SqArea;
 
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
+
 public class SqAreaTest {
     @Test
-    public  void henp4k1s1()  {
+    public void henp4k1s1() {
         int k = 1;
         int p = 4;
         int expected = 1;

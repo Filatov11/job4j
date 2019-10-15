@@ -11,8 +11,9 @@ public class Check {
             if (etalon != data[i]) {
                 result = false;
                 break;
+            } else {
+                result = true;
             }
-            else   result = true;
         }
 
         return result;

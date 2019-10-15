@@ -8,14 +8,16 @@ public class Converter {
     public static int rubleToDollar(int value) {
         return value / 60;
     }
-    public static int  dollarsToRubles(int value) {
-        int  newValue = value * 60;
-        System.out.println(  value + " dollars are " + newValue + " rubles.");
+
+    public static int dollarsToRubles(int value) {
+        int newValue = value * 60;
+        System.out.println(value + " dollars are " + newValue + " rubles.");
         return newValue;
     }
-    public static int  euroToRubles(int value) {
-        int  newValue =value * 70;
-        System.out.println(  value + " dollars are " + newValue + " rubles.");
+
+    public static int euroToRubles(int value) {
+        int newValue = value * 70;
+        System.out.println(value + " dollars are " + newValue + " rubles.");
         return newValue;
     }
 

@@ -1,6 +1,7 @@
-package  ru.job4j.condition;
+package ru.job4j.condition;
+
 public class Chat {
-    public  static  void  main (String[] args) {
+    public static void main(String[] args) {
         String questionOne, questionTwo, questionThree, questionFour, questionFive;
         questionOne = "Это я";
         ru.job4j.condition.DummyBot bot = new ru.job4j.condition.DummyBot(questionOne);
@@ -13,7 +14,7 @@ public class Chat {
         //System.out.println(bot.answer(questionThree));
         questionFour = "Доброго!";
         System.out.println("I Say: " + questionFour);
-        System.out.println("Bot answer: " +  bot.answer(questionFour));
+        System.out.println("Bot answer: " + bot.answer(questionFour));
     }
 
 }

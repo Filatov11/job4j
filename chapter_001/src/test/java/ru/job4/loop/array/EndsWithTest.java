@@ -1,8 +1,11 @@
 package ru.job4.loop.array;
+
 import org.junit.Test;
-import  ru.job4j.array.EndsWith;
+import ru.job4j.array.EndsWith;
+
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
+
 public class EndsWithTest {
     @Test
     public void whenStartWithPrefixThenTrue() {

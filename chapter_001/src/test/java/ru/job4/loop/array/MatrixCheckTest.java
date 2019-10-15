@@ -1,9 +1,12 @@
 package ru.job4.loop.array;
+
 import org.junit.Ignore;
 import org.junit.Test;
+import ru.job4j.array.MatrixCheck;
+
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
-import  ru.job4j.array.MatrixCheck;
+
 @Ignore
 public class MatrixCheckTest {
     @Test
