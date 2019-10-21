@@ -10,8 +10,16 @@ public class MatrixCheck {
                 //for () { проверить последовательность.
                 for (int i = 0; i < (board.length - 1); i++) {
                     if (board[i][i] != 'X') {
-                        result = false;
-                        continue;
+                        int rowCount = 0; int colCount = 0;
+                        for (int k=0; k < (board.length - 1); k++) {
+                           if (board[i][k] == 'X') { rowCount = rowCount +1;};
+                           if (board[k][i] == 'X') { colCount = colCount +1;};
+                        }
+                        if ((rowCount == board.length) && (colCount == board.length))  {result = true;
+                            break;} else {   result = true;
+                            break;}
+
+                        
                     } else {
                         result = true;
                         break;

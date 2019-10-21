@@ -16,6 +16,6 @@ public class CarUsage {
         System.out.println("It's 10 kilometers from here.");
         int distance = 10;
         audi.drive(distance);
-        audi.GasInfo();
+        audi.gasInfo();
     }
 }
