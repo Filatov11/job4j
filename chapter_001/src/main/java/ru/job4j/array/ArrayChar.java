@@ -11,7 +11,7 @@ public class ArrayChar {
         //}
         //
         int minLength = (word.length > pref.length) ? pref.length : word.length;
-        for (int i = 0 ; i < minLength; i++ )  {
+        for (int i = 0; i < minLength; i++) {
             if (word[i] == pref[i]) {
                 result = true;
             } else {

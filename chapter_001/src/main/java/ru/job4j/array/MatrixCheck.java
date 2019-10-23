@@ -1,5 +1,4 @@
 package ru.job4j.array;
-
 public class MatrixCheck {
     public static boolean isWin(char[][] board) {
         boolean result = false;
@@ -7,26 +6,31 @@ public class MatrixCheck {
             for (int cell = 0; cell < board.length; cell++) {
                 char sign = board[row][cell];
                 System.out.print(sign);
-                //for () { проверить последовательность.
                 for (int i = 0; i < (board.length - 1); i++) {
                     if (board[i][i] != 'X') {
-                        int rowCount = 0; int colCount = 0;
-                        for (int k=0; k < (board.length - 1); k++) {
-                           if (board[i][k] == 'X') { rowCount = rowCount +1;};
-                           if (board[k][i] == 'X') { colCount = colCount +1;};
+                        int rowCount = 0;
+                        int colCount = 0;
+                        for (int k = 0; k < (board.length - 1); k++) {
+                            if (board[i][k] == 'X') {
+                                rowCount = rowCount + 1;
+                            }
+                            if (board[k][i] == 'X') {
+                                colCount = colCount + 1;
+                            }
                         }
-                        if ((rowCount == board.length) && (colCount == board.length))  {result = true;
-                            break;} else {   result = true;
-                            break;}
-
-                        
+                        if ((rowCount == board.length) && (colCount == board.length)) {
+                            result = true;
+                            break;
+                        } else {
+                            result = true;
+                            break;
+                        }
                     } else {
                         result = true;
                         break;
                     }
                 }
             }
-            //System.out.println( result);
         }
         return result;
     }
@@ -39,9 +43,8 @@ public class MatrixCheck {
                 {'_', '_', 'X', '_', '_'},
                 {'_', '_', 'X', '_', '_'},
         };
-        boolean win = isWin(hasWinVertical);
-        System.out.println("A board has a winner : " + win);
         System.out.println();
+        boolean win = isWin(hasWinVertical);
         char[][] hasWinHor = {
                 {'_', '_', '_', '_', '_'},
                 {'X', 'X', 'X', 'X', 'X'},
@@ -50,7 +53,7 @@ public class MatrixCheck {
                 {'_', '_', '_', '_', '_'},
         };
         boolean winHor = isWin(hasWinHor);
-        System.out.println("A board has a winner : " + winHor);
+
         System.out.println();
         char[][] notWin = {
                 {'_', '_', 'X', '_', '_'},
@@ -60,6 +63,5 @@ public class MatrixCheck {
                 {'_', '_', 'X', '_', '_'},
         };
         boolean lose = isWin(notWin);
-        System.out.println("A board has a winner : " + lose);
     }
 }

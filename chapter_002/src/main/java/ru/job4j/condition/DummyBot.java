@@ -13,10 +13,8 @@ public class DummyBot {
         if ("Привет, бот!".equals(question)) {
             rsl = "Доброго дня!";
         } else if (("Доброго!").equals(question)) {
-            {
                 rsl = "Приятного аппетита!";
                 return rsl;
-            }
         }
 
 
