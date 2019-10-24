@@ -9,10 +9,8 @@ public class Check {
         for (int i = 1; i < data.length; i++) {
 
             if (etalon != data[i]) {
-                result = false;
-                break;
-            } else {
                 result = true;
+                break;
             }
         }
 
