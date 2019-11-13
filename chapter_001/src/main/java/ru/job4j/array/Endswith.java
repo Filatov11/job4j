@@ -1,7 +1,7 @@
 package ru.job4j.array;
 
 
-public class EndsWith {
+public class Endswith {
     public static boolean endsWith(char[] word, char[] post) {
         boolean result = false;
         int maxLength, minLength;

@@ -1,6 +1,6 @@
 package ru.job4j.array;
 
-public class FindLoop {
+public class Findloop {
     public static int indexOf(int[] data, int el) {
         int rst = -1;
         for (int i = 0; i < (data.length - 1); i++) {

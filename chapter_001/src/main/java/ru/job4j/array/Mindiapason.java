@@ -1,6 +1,6 @@
 package ru.job4j.array;
 
-public class MinDiapason {
+public class Mindiapason {
     public static int findMin(int[] data, int start, int stop) {
         int minVal = data[start];
         for (int i = start; i < stop; i++) {

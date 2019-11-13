@@ -1,7 +1,7 @@
 package ru.job4.loop.array;
 
 import org.junit.Test;
-import ru.job4j.array.EndsWith;
+import ru.job4j.array.Endswith;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
@@ -11,7 +11,7 @@ public class EndsWithTest {
     public void whenStartWithPrefixThenTrue() {
         char[] word = {'H', 'e', 'l', 'l', 'o'};
         char[] post = {'l', 'o'};
-        boolean result = EndsWith.endsWith(word, post);
+        boolean result = Endswith.endsWith(word, post);
         assertThat(result, is(true));
     }
 
@@ -19,7 +19,7 @@ public class EndsWithTest {
     public void whenNotStartWithPrefixThenFalse() {
         char[] word = {'H', 'e', 'l', 'l', 'o'};
         char[] post = {'l', 'a'};
-        boolean result = EndsWith.endsWith(word, post);
+        boolean result = Endswith.endsWith(word, post);
         assertThat(result, is(false));
     }
 
@@ -28,7 +28,7 @@ public class EndsWithTest {
     public void whenNotStartWithPrefixThenFalse1() {
         char[] post = {'H', 'e', 'l', 'l', 'o'};
         char[] word = {'l', 'a'};
-        boolean result = EndsWith.endsWith(word, post);
+        boolean result = Endswith.endsWith(word, post);
         assertThat(result, is(false));
     }
 }

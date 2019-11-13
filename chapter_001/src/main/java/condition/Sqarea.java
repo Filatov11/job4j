@@ -1,6 +1,6 @@
 package ru.job4j.condition;
 
-public class SqArea {
+public class Sqarea {
     public static double square(int p, int k) {
         return p * k;
     }

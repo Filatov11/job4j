@@ -1,6 +1,6 @@
 package condition;
 
-public class SqMax {
+public class Sqmax {
     public static int max(int first, int second, int third, int forth) {
         int result = forth;
         if (first > second) {

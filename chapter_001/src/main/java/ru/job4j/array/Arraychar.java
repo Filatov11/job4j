@@ -1,6 +1,6 @@
 package ru.job4j.array;
 
-public class ArrayChar {
+public class Arraychar {
     public static boolean startsW(char[] word, char[] pref) {
         boolean result = false;
         //

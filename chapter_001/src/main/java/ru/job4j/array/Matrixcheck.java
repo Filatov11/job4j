@@ -1,5 +1,5 @@
 package ru.job4j.array;
-public class MatrixCheck {
+public class Matrixcheck {
     public static boolean isWin(char[][] board) {
         boolean result = false;
         for (int row = 0; row < board.length; row++) {

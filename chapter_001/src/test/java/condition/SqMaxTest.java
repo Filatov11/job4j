@@ -15,7 +15,7 @@ public class SqMaxTest {
         int m = 2;
         int n = 10;
         int expected = 10;
-        int s = condition.SqMax.max(k, p, m, n);
+        int s = Sqmax.max(k, p, m, n);
         assertThat(s, is(expected));
     }
 
@@ -26,7 +26,7 @@ public class SqMaxTest {
         int m = 2;
         int n = 10;
         int expected = 10;
-        int s = condition.SqMax.max(p, m, n, k);
+        int s = Sqmax.max(p, m, n, k);
         assertThat(s, is(expected));
     }
 
@@ -37,7 +37,7 @@ public class SqMaxTest {
         int m = 2;
         int n = 10;
         int expected = 10;
-        int s = condition.SqMax.max(m, n, k, p);
+        int s = Sqmax.max(m, n, k, p);
         assertThat(s, is(expected));
     }
 
@@ -49,7 +49,7 @@ public class SqMaxTest {
         int m = 2;
         int n = 10;
         int expected = 10;
-        int s = condition.SqMax.max(n, k, p, m);
+        int s = Sqmax.max(n, k, p, m);
         assertThat(s, is(expected));
     }
 

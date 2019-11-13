@@ -1,6 +1,6 @@
 package condition;
 
-public class MultiMax {
+public class Multimax {
     public int max(int first, int second, int third) {
         int result = first;
         result = (first < second) ? second : first;

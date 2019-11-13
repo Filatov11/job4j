@@ -2,7 +2,7 @@ package ru.job4.loop.array;
 
 import org.junit.Ignore;
 import org.junit.Test;
-import ru.job4j.array.MatrixCheck;
+import ru.job4j.array.Matrixcheck;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
@@ -18,7 +18,7 @@ public class MatrixCheckTest {
                 {' ', ' ', 'X', ' ', ' '},
                 {' ', ' ', 'X', ' ', ' '},
         };
-        boolean result = MatrixCheck.isWin(input);
+        boolean result = Matrixcheck.isWin(input);
         assertThat(result, is(true));
     }
 
@@ -31,7 +31,7 @@ public class MatrixCheckTest {
                 {' ', ' ', 'X', ' ', ' '},
                 {' ', ' ', 'X', ' ', ' '},
         };
-        boolean result = MatrixCheck.isWin(input);
+        boolean result = Matrixcheck.isWin(input);
         assertThat(result, is(false));
     }
 
@@ -45,7 +45,7 @@ public class MatrixCheckTest {
                 {' ', ' ', ' ', ' ', ' '},
                 {' ', ' ', ' ', ' ', ' '},
         };
-        boolean result = MatrixCheck.isWin(input);
+        boolean result = Matrixcheck.isWin(input);
         assertThat(result, is(true));
     }
 
