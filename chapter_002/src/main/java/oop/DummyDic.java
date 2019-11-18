@@ -4,7 +4,7 @@ public class DummyDic {
     public void engToRus(String eng) {
         System.out.println("Неизвестное слово. " + eng);
     }
-    static  void main(String[] args){
+    public static  void main(String[] args){
         DummyDic dictionary = new DummyDic();
         dictionary.engToRus("Word");
     }
