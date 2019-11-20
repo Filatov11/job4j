@@ -1,4 +1,4 @@
-package ru.job4j.convert;
+package convert;
 
 import org.junit.Assert;
 import org.junit.Test;

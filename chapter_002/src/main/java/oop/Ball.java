@@ -1,10 +1,10 @@
 package oop;
 
 public class Ball {
-    public void run_away() {
+    public void runAway() {
         System.out.println("I am running away!!!");
     }
-    public void sing_song() {
+    public void singSong() {
         System.out.println("Tra-ta-ta, Tra-ta-ta!!!!");
     }
     public void born() {

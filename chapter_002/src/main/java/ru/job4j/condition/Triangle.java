@@ -3,14 +3,8 @@ import  ru.job4j.condition.Point;
 import static java.lang.Math.sqrt;
 import static java.lang.Math.pow;
 public class Triangle {
-    private Point first;
-    private Point second;
-    private Point third;
 
     public Triangle(Point ap, Point bp, Point cp) {
-        this.first = ap;
-        this.second = bp;
-        this.third = cp;
     }
     public double area(int x1, int y1, int x2, int y2, int x3, int y3) {
         double rsl = -1;
@@ -31,11 +25,7 @@ public class Triangle {
 
 
     private boolean exists (double a, double b, double c ) {
-        if ((a + b) >= c ) { return true;
-         }
-        else {
-            return false;
-        }
+        return (a + b) >= c;
     }
     private  double perimeter (double a, double b, double c ){
 

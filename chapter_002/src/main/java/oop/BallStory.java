@@ -8,15 +8,15 @@ public class BallStory {
         Fox fox = new Fox();
         ball.born();
         hare.meeting(ball);
-        hare.try_to_eat(ball);
-        ball.sing_song();
-        ball.run_away();
+        hare.tryEat(ball);
+        ball.singSong();
+        ball.runAway();
         greyWolf.meeting(ball);
-        greyWolf.try_to_eat(ball);
-        ball.sing_song();
-        ball.run_away();
+        greyWolf.tryEat(ball);
+        ball.singSong();
+        ball.runAway();
         fox.meeting(ball);
-        ball.sing_song();
-        fox.try_to_eat(ball);
+        ball.singSong();
+        fox.tryEat(ball);
     }
 }
