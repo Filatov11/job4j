@@ -25,7 +25,7 @@ public class Triangle {
 
 
     private boolean exists (double a, double b, double c ) {
-        return (a + b) >= c;
+        return ((a + b) > c) && ((c + b) > a) && (( a + c ) > b);
     }
     private  double perimeter (double a, double b, double c ){
 
