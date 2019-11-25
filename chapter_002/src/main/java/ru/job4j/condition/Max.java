@@ -26,7 +26,7 @@ public class Max {
 
     public static int max(int left, int right, int middle, int four) {
         int result = left;
-      result = max(right,  middle, four) < max(right,middle) ? max(right,middle) : max(right,  middle, four) ;
+      result = max(max(right,middle),four) < left ? left: max(max(right,middle),four) ;
         return result;
     //    int maxval;
    //     if ((left > right) && (left > middle) && (left > four)) {
