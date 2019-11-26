@@ -1,9 +1,9 @@
 package ru.job4j.tracker;
 
 public class Tiger  extends  Predator {
-    public Tiger() {
-        super();
-        System.out.println("This is Tiger");
+    public Tiger(String name3) {
+        super(name3);
+        System.out.println("This is Tiger" + this.name);
         System.out.println(this.getClass().getSimpleName());
         System.out.println("-----------------------");
     }
@@ -11,11 +11,12 @@ public class Tiger  extends  Predator {
 
     public static void main(String[] args) {
         System.out.println("------00000000--------");
-        Animal animal  = new Animal();
-        System.out.println("------111111111--------");
-        Predator predator = new Predator();
-        System.out.println("------222222222--------");
-        Tiger tiger = new Tiger();
+        Animal animal  = new Animal("Lynx");
+        System.out.println("------111111111--------" + animal.name);
+        Predator predator = new Predator("Crocodile");
+        System.out.println("------222222222--------" + predator.name);
+        Tiger tiger = new Tiger("Tiger1");
+        System.out.println("------333333--------" + tiger.name);
     }
 }
 
