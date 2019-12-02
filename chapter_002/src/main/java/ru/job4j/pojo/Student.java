@@ -3,9 +3,9 @@ package ru.job4j.pojo;
 import java.util.Date;
 
 public class Student {
-    String fullName;
-    String group;
-    Date admissionDate;
+    private String fullName;
+    private String group;
+    private Date admissionDate;
 
     public String getFullName() {
         return fullName;
