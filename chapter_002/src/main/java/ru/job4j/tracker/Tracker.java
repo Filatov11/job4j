@@ -94,7 +94,7 @@ public class Tracker {
     public Items findById(String id) {
       Items ret = new Items(null);
      for (int i = 0; i < this.position; i++ ) {
-         if ( ( this.itemss[i].getName().equals(id))) {
+         if ( ( this.itemss[i].getId().equals(id))) {
               ret = this.itemss[i];
              break;
          }
