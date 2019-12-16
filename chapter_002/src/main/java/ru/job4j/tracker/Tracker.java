@@ -31,15 +31,15 @@ public class Tracker {
         boolean res = false;
         Items temp = new Items(null);
         int index = 0;
-        for (int i=0; i < this.position-1; i++ ) {
+        for (int i=0; i < this.position; i++ ) {
             if (itemss[i].getId().equals(id)) {
                 temp = itemss[i];
-                for (int j=i; j < this.position-1; j++ ) {
+                for (int j=i; j < this.position; j++ ) {
                     itemss[j] = itemss[j+1];
                 }
                 itemss[i] = temp;
                 res =  true;
-            } else  {res =  false;}
+            }
         }
 
         return res;
@@ -48,10 +48,11 @@ public class Tracker {
 
     public boolean replace(String id, Items item) {
         boolean res = false;
-        for (int i = 0; i < this.position-1; i++) {
+        for (int i = 0; i < this.position; i++) {
             if ((this.itemss[i].getId().equals(item.getId()))) {
                this.itemss[i].setName(item.getName());
                 res = true;
+                break;
             }
         }
         return res;
@@ -61,25 +62,26 @@ public class Tracker {
 
    //// -----------------
     public Items[] findAll() {
-        int cnt = 0;
-        for(int i = 0; i < this.position-1; i++){
-            if((this.itemss[i].getId().equals(null))) {
-                cnt++;
-                for(int j = i; j < this.position - 1; j++){
-                    this.itemss[j] = this.itemss[j+1];
-                }
-                break;
-            }  else  { }
-        }
-        Items[] tempItem = new Items[this.position];
-        tempItem = Arrays.copyOf(this.itemss,cnt);
-        return tempItem;
+      //  int cnt = 0;
+     //   for(int i = 0; i < this.position; i++){
+       //     if((this.itemss[i].getId().equals(null))) {
+        //        cnt++;
+       //         for(int j = i; j < this.position ; j++){
+      //              this.itemss[j] = this.itemss[j+1];
+       //         }
+       //         break;
+       //     }  else  { }
+     //   }
+      //  Items[] tempItem = new Items[this.position];
+       // tempItem = Arrays.copyOf(this.itemss,cnt);
+        return Arrays.copyOf(items, position);
+      //  return tempItem;
     }
     //// -----------------
     public Items[] findByName(String key) {
         int cnt = 0;
         Items[] temp = new Items[this.position];
-        for (int i = 0; i < this.position-1; i++) {
+        for (int i = 0; i < this.position; i++) {
             if ((this.itemss[i].getId().equals(key))) {
                 temp[cnt] = this.itemss[i];
                 cnt++;
@@ -91,11 +93,12 @@ public class Tracker {
     }
     public Items findById(String id) {
       Items ret = new Items(null);
-     for (int i = 0; i < this.position-1; i++ ) {
+     for (int i = 0; i < this.position; i++ ) {
          if ( ( this.itemss[i].getName().equals(id))) {
               ret = this.itemss[i];
+             break;
          }
-         break;
+
      }
         return ret;
     }
