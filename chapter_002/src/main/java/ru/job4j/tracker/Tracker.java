@@ -12,7 +12,9 @@ public class Tracker {
 
 
     private final Items[] itemss = new Items[100];
-
+    public int getPosition() {
+        return position;
+    }
   public  Items add(Items items) {
       items.setId(this.generateId());
       this.itemss[this.position++] = items;
@@ -74,7 +76,7 @@ public class Tracker {
      //   }
       //  Items[] tempItem = new Items[this.position];
        // tempItem = Arrays.copyOf(this.itemss,cnt);
-        return Arrays.copyOf(items, position);
+        return Arrays.copyOf(itemss, position);
       //  return tempItem;
     }
     //// -----------------
