@@ -24,7 +24,7 @@ public class Tracker {
   }
     public String generateId() {
         Random rm = new Random();
-        String str = String.valueOf(rm.nextLong() +"="+ System.currentTimeMillis());
+        String str = String.valueOf(rm.nextLong() + System.currentTimeMillis());
         return str;
     }
 
@@ -32,18 +32,29 @@ public class Tracker {
     public  boolean delete(String id) {
         boolean res = false;
         Items temp = new Items(null);
-        int index = 0;
+        int index = 0; String nmm, idd;
         for (int i=0; i < this.position; i++ ) {
-            if (itemss[i].getId().equals(id)) {
-                temp = itemss[i];
-                for (int j=i; j < this.position; j++ ) {
-                    itemss[j] = itemss[j+1];
+            if (this.itemss[i].getId().equals(id)) {
+                temp.setId(this.itemss[i].getId()); temp.setName(this.itemss[i].getName());
+                for (int j=i; j < this.position-1; j++ ) {
+                 System.out.println( "i = " + i  +  ":  j = " + j);
+                    nmm = this.itemss[j+1].getName();
+                    System.out.println( "nmm = " + nmm);
+                    idd = this.itemss[j+1].getId();
+                    System.out.println( "idd  = " + idd);
+                    this.itemss[j].setName(nmm);
+                  this.itemss[j].setId(idd);
+               //     itemss[j] = itemss[j+1];
                 }
-                itemss[i] = temp;
+              //  this.itemss[i].setName(temp.getName()) ;
+             //  this.itemss[i].setId(temp.getId());
+                this.position--;
                 res =  true;
             }
-        }
 
+        }
+       // this.itemss[position-1].setName(null) ;
+      //  this.itemss[position-1].setId(null);
         return res;
     }
 
