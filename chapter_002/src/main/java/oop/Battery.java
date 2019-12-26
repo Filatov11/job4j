@@ -2,7 +2,7 @@ package oop;
 
 public class Battery {
     private int load;
-    public Battery( int value) {
+    public Battery(int value) {
         this.load = value;
     }
     public void exchange(Battery batt) {

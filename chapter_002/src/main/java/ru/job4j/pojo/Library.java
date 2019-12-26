@@ -2,18 +2,17 @@ package ru.job4j.pojo;
 
 public class Library {
     public  static void main(String[] args) {
-        Book book1 = new Book ("First Book" , 100);
-        Book book2 = new Book ("Second Book" , 200);
-        Book book3 = new  Book ("Third book", 300);
-        Book book0 = new Book ("Clean Code" , 400);
+        Book book1 = new Book("First Book", 100);
+        Book book2 = new Book("Second Book", 200);
+        Book book3 = new  Book("Third book", 300);
+        Book book0 = new Book("Clean Code", 400);
         Book[] books = new Book[4];
         books[0] = book0;
         books[1] = book1;
         books[2] = book2;
         books[3] = book3;
 
-        for (int index = 0; index < books.length; index++) {
-            Book bk = books[index];
+        for (Book bk : books) {
             System.out.println(bk.getName() + " - " + bk.getPages());
         }
 
@@ -25,8 +24,7 @@ public class Library {
         books[0].setPages(tempBook.getPages());
         books[0].setName(tempBook.getName());
 
-        for (int index = 0; index < books.length; index++) {
-            Book bk = books[index];
+        for (Book bk : books) {
             System.out.println(bk.getName() + " - " + bk.getPages());
         }
 

@@ -1,9 +1,5 @@
 package ru.job4j.tracker;
-import  java.util.Random;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 
-import java.util.Date;
 public class Items {
 
     private String id;
@@ -25,7 +21,7 @@ public class Items {
         this.name = name;
     }
 
-    public  Items(String name){
+    public  Items(String name) {
         this.name = name;
     }
 

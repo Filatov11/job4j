@@ -1,11 +1,9 @@
 package ru.job4j.tracker;
 import java.lang.String;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Random;
 import ru.job4j.tracker.Items;
 import java.util.Arrays;
+@SuppressWarnings("ALL")
 public class Tracker {
     private final Items[] items = new Items[100];
     private int position = 0;
@@ -33,15 +31,15 @@ public class Tracker {
         boolean res = false;
         Items temp = new Items(null);
         int index = 0; String nmm, idd;
-        for (int i=0; i < this.position; i++ ) {
+        for (int i = 0; i < this.position; i++) {
             if (this.itemss[i].getId().equals(id)) {
                 temp.setId(this.itemss[i].getId()); temp.setName(this.itemss[i].getName());
-                for (int j=i; j < this.position-1; j++ ) {
-                 System.out.println( "i = " + i  +  ":  j = " + j);
-                    nmm = this.itemss[j+1].getName();
-                    System.out.println( "nmm = " + nmm);
-                    idd = this.itemss[j+1].getId();
-                    System.out.println( "idd  = " + idd);
+                for (int j = i; j < this.position - 1; j++) {
+                 System.out.println("i = " + i  +  ":  j = " + j);
+                    nmm = this.itemss[j + 1].getName();
+                    System.out.println("nmm = " + nmm);
+                    idd = this.itemss[j + 1].getId();
+                    System.out.println("idd  = " + idd);
                     this.itemss[j].setName(nmm);
                   this.itemss[j].setId(idd);
                //     itemss[j] = itemss[j+1];
@@ -101,13 +99,13 @@ public class Tracker {
             }
         }
         Items[] tempItem = new Items[this.position];
-        tempItem = Arrays.copyOf(temp,cnt);
+        tempItem = Arrays.copyOf(temp, cnt);
         return tempItem;
     }
     public Items findById(String id) {
       Items ret = new Items(null);
-     for (int i = 0; i < this.position; i++ ) {
-         if ( ( this.itemss[i].getId().equals(id))) {
+     for (int i = 0; i < this.position; i++) {
+         if ((this.itemss[i].getId().equals(id))) {
               ret = this.itemss[i];
              break;
          }

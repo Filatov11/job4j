@@ -1,7 +1,7 @@
 package oop;
 
 public class Fox {
-    public  void   meeting (Ball ball) {
+    public  void   meeting(Ball ball) {
         System.out.println("I meet you!!!");
     }
     public  void tryEat(Ball ball)  {

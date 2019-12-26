@@ -11,7 +11,7 @@ public class Builder extends Engineer {
 
     }
 
-    Building building = new Building(prj, arc);
+    Building building = new Building(null, null);
 
     public void doproject(Building building) {
 

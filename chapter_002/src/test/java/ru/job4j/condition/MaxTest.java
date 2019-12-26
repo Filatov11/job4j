@@ -33,7 +33,7 @@ public class MaxTest {
 
     @Test
     public void whenMax5To5Then52() {
-        int result = Max.max(5, 5, 7,11);
+        int result = Max.max(5, 5, 7, 11);
         assertThat(result, is(11));
     }
 

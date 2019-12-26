@@ -6,7 +6,7 @@ public class Point {
     private int x;
     private  int y;
     private int z;
-    public Point( int first, int second) {
+    public Point(int first, int second) {
         this.x = first;
         this.y = second;
     }
@@ -26,8 +26,8 @@ public class Point {
         System.out.println(String.format("Point[%s, %s]", this.x, this.y));
     }
     public  static  void  main(String[] args) {
-        Point a = new Point(1,2);
-        Point b = new Point(3,5);
+        Point a = new Point(1, 2);
+        Point b = new Point(3, 5);
         double dist = a.distance(b);
         System.out.println(dist);
     }

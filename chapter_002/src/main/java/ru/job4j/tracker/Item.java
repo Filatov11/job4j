@@ -9,7 +9,7 @@ public class Item {
     }
 
     public static void main(String[] args) {
-       String name1 = "NAME" ;
+       String name1 = "NAME";
         Bug bug = new Bug(name1);
 
     }

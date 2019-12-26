@@ -1,7 +1,6 @@
 package ru.job4j.condition;
 import  ru.job4j.condition.Point;
-import static java.lang.Math.sqrt;
-import static java.lang.Math.pow;
+
 public class Triangle {
 
     public Triangle(Point ap, Point bp, Point cp) {
@@ -16,7 +15,7 @@ public class Triangle {
         double c = second.distance(third);
         double p = perimeter(a, b, c);
         if (this.exists(a, b, c)) {
-            rsl = Math.sqrt((p *(p - a*b) * (p - a*c) * (p - b*c)));
+            rsl = Math.sqrt((p * (p - a * b) * (p - a * c) * (p - b * c)));
 
         }
         return rsl;
@@ -24,12 +23,12 @@ public class Triangle {
 
 
 
-    private boolean exists (double a, double b, double c ) {
-        return ((a + b) > c) && ((c + b) > a) && (( a + c ) > b);
+    private boolean exists(double a, double b, double c) {
+        return ((a + b) > c) && ((c + b) > a) && ((a + c) > b);
     }
-    private  double perimeter (double a, double b, double c ){
+    private  double perimeter(double a, double b, double c) {
 
-        return (a + b + c)/2;
+        return (a + b + c) / 2;
     }
 
 }
