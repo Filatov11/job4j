@@ -8,7 +8,7 @@ public class StartUI {
     public static void findByIdItem(Input input, Tracker tracker)  {
         System.out.println("=== Find item by Id ====");
         System.out.println("Enter ID of item to find: ");
-        String name = input.askStr();
+        String name = input.askStr("Id_of_item");
         Items itemFindedByID = new Items(null);
         if (tracker.findById(name).getName() == null) {
             System.out.println("No item ");
@@ -20,7 +20,7 @@ public class StartUI {
     public static void findByNameItem(Input input, Tracker tracker)  {
         System.out.println("=== Find items by name ====");
         System.out.println("Enter NAME of item to find: ");
-        String name = input.askStr();
+        String name = input.askStr("Name of Item");
         Items[] itemsFindedByNAME = new Items[tracker.getPosition()];
         itemsFindedByNAME = tracker.findByName(name);
         for (Items value : itemsFindedByNAME) {
@@ -35,7 +35,7 @@ public class StartUI {
             System.out.println("Id =  " + tracker.findAll()[i].getId() + " ,  Name =   " +  tracker.findAll()[i].getName());
         }
         System.out.println("Enter id of item to delete: ");
-        String idDel = input.askStr();
+        String idDel = input.askStr("Item_delete");
 
         if (tracker.delete(idDel))   {
             System.out.println("Sucsessful deleting ");
@@ -48,7 +48,7 @@ public class StartUI {
         System.out.println("=== Create a new Item ====");
         System.out.print("Enter name: ");
         String name = input.askStr("");
-        Item item = new Item(name);
+        Items item = new Items(name);
         tracker.add(item);
     }
     public static void showItem( Items[] items,Tracker tracker) {
@@ -67,9 +67,9 @@ public class StartUI {
         }
         System.out.println("=== ------ ====");
         System.out.println("Enter ID of item to edit: ");
-        String id1 = input.askStr();
+        String id1 = input.askStr("Edit item");
         System.out.println("Enter NEW name of item: ");
-        String newName = input.askStr();
+        String newName = input.askStr("NewItem");
         Items temp = new Items(newName);
         temp.setId(id1);
         //     String idRep =0
@@ -93,14 +93,14 @@ public class StartUI {
          } else if (select == 1)  {
              StartUI.showItem( items,tracker);
          }  else if (select == 2) {
-             editItem(Input input, Tracker tracker)
+             editItem( input,  tracker);
          }  else if (select == 3)  {
-             deleteItem(Input input, Tracker tracker)
+             deleteItem( input,  tracker);
          }   else if (select == 4) {
-             findByIdItem(Input input, Tracker tracker)
+             findByIdItem( input, tracker);
 
          } else if (select == 5)  {
-             findByNameItem(Input input, Tracker tracker)
+             findByNameItem(input,  tracker);
          } else if (select == 6) {
              run = false;
          }
