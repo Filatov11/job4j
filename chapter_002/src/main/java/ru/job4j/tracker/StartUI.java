@@ -79,7 +79,7 @@ public class StartUI {
             System.out.println(" not  replaced ");
         }
     }
-    public static void showItem( Items[] items,Tracker tracker)
+
 
     public void init(Input input, Tracker tracker) {
        boolean run = true;
