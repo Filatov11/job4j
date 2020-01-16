@@ -10,7 +10,9 @@ public class StartUI {
         System.out.println("Enter ID of item to find: ");
         String name = input.askStr("Id_of_item");
         Items itemFindedByID = new Items(null);
-        if (tracker.findById(name).getName() == null) {
+      //  Items[] itemsFindedByID = new Items[tracker.getPosition()];
+        itemFindedByID = tracker.findById(name);
+        if (itemFindedByID.getName() == null) {
             System.out.println("No item ");
         } else {
             System.out.println("finded item: " + itemFindedByID.getName());
@@ -20,7 +22,7 @@ public class StartUI {
     public static void findByNameItem(Input input, Tracker tracker)  {
         System.out.println("=== Find items by name ====");
         System.out.println("Enter NAME of item to find: ");
-        String name = input.askStr("Name of Item");
+        String name = input.askStr("");
         Items[] itemsFindedByNAME = new Items[tracker.getPosition()];
         itemsFindedByNAME = tracker.findByName(name);
         for (Items value : itemsFindedByNAME) {
@@ -35,7 +37,7 @@ public class StartUI {
             System.out.println("Id =  " + tracker.findAll()[i].getId() + " ,  Name =   " +  tracker.findAll()[i].getName());
         }
         System.out.println("Enter id of item to delete: ");
-        String idDel = input.askStr("Item_delete");
+        String idDel = input.askStr("");
 
         if (tracker.delete(idDel))   {
             System.out.println("Sucsessful deleting ");
@@ -62,14 +64,19 @@ public class StartUI {
     public static void editItem(Input input, Tracker tracker)  {
         System.out.println("=== Edit item ====");
         System.out.println("Item List");
-        for (int i = 0; i < tracker.findAll().length; i++) {
-            System.out.println("Id =  " + tracker.findAll()[i].getId() + ",  Name =   " +  tracker.findAll()[i].getName());
+       // for (int i = 0; i < tracker.findAll().length; i++) {
+     //       System.out.println("Id =  " + tracker.findAll()[i].getId() + ",  Name =   " +  tracker.findAll()[i].getName());
+     //   }
+        Items[] itemslist = new Items[tracker.getPosition()];
+         itemslist = tracker.findAll();
+        for (Items value : itemslist) {
+            System.out.println("ItemName =  " + value.getName() + "ItemId = " + value.getId());
         }
         System.out.println("=== ------ ====");
         System.out.println("Enter ID of item to edit: ");
-        String id1 = input.askStr("Edit item");
+        String id1 = input.askStr("");
         System.out.println("Enter NEW name of item: ");
-        String newName = input.askStr("NewItem");
+        String newName = input.askStr("");
         Items temp = new Items(newName);
         temp.setId(id1);
         //     String idRep =0

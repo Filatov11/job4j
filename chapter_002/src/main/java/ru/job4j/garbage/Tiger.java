@@ -1,4 +1,4 @@
-package ru.job4j.tracker;
+package ru.job4j.garbage;
 
 public class Tiger  extends  Predator {
     public Tiger(String name3) {

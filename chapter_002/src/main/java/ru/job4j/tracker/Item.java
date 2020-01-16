@@ -1,5 +1,7 @@
 package ru.job4j.tracker;
 
+import ru.job4j.garbage.Bug;
+
 public class Item {
  //   public  Item() {
  //   }

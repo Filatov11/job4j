@@ -37,14 +37,16 @@ public class StartUITest {
             Input input1 = new StubInput(answers1);
             String[] answers2 = {"Fix Scanner"};
             Input input2 = new StubInput(answers2);
-            Tracker tracker = new Tracker();
-            StartUI.createItem(input1, tracker);
-            StartUI.createItem(input2, tracker);
-            Items it = tracker.findAll()[0];
-            StartUI.deleteItem(input2, tracker);
-            it = tracker.findAll()[0];
+            Tracker trackerDel = new Tracker();
+            StartUI.createItem(input1, trackerDel);
+            StartUI.createItem(input2, trackerDel);
+            int length = trackerDel.getPosition();
+            //it = new   Items[length];
+            Items[]  it  = trackerDel.findAll();
+            StartUI.deleteItem(input2, trackerDel);
+            it = trackerDel.findAll();
             Items expected = new Items("Fix Scanner");
-            assertThat(it.getName(), is(expected.getName()));
+            assertThat(it[0].getName(), is(expected.getName()));
 
         }
 
