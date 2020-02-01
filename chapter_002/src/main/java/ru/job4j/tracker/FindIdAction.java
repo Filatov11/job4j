@@ -8,7 +8,6 @@ public class FindIdAction implements UserAction {
 
     @Override
     public boolean execute(Input input, Tracker tracker) {
-        System.out.println("Enter ID of item to find: ");
         String name = input.askStr("Id_of_item");
         Items itemFindedByID = new Items(null);
         //  Items[] itemsFindedByID = new Items[tracker.getPosition()];
@@ -18,6 +17,6 @@ public class FindIdAction implements UserAction {
         } else {
             System.out.println("finded item: " + itemFindedByID.getName());
         }
-        return false;
+        return true;
     }
 }

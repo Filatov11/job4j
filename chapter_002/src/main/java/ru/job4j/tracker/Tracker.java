@@ -7,8 +7,6 @@ import java.util.Arrays;
 public class Tracker {
     private final Items[] items = new Items[100];
     private int position = 0;
-
-
     private final Items[] itemss = new Items[100];
     public int getPosition() {
         return position;
@@ -17,8 +15,6 @@ public class Tracker {
       items.setId(this.generateId());
       this.itemss[this.position++] = items;
       return items;
-
-
   }
     public String generateId() {
         Random rm = new Random();

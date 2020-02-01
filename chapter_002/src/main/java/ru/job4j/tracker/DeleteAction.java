@@ -7,13 +7,12 @@ public class DeleteAction implements UserAction{
     }
     @Override
     public boolean execute(Input input, Tracker tracker) {
-        System.out.print("Enter id ");
-        String idDel = input.askStr("");
+        String idDel = input.askStr("Enter id ");
         if (tracker.delete(idDel))   {
             System.out.println("Sucsessful deleting ");
         } else  {
             System.out.println("Unable to delete ");
         }
-        return false;
+        return true;
     }
 }
