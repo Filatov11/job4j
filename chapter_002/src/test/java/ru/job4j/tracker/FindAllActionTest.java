@@ -60,30 +60,18 @@ public class FindAllActionTest {
         System.setOut(new PrintStream(out2));
        Tracker tracker = new Tracker();
         Items items = new Items("fix bug");
-       tracker.add(items);
-       ShowAction act = new ShowAction();
-
+        tracker.add(items);
         StartUI startUI = new StartUI();
-        UserAction[] acts = {
-                new CreateAction()
-                , new ShowAction()
-                , new FindIdAction()
-               , new ReplaceAction()
-               , new DeleteAction()
-                , new FindIdAction()
-                , new FindNameAction()
-               , new ExitAction()
-        };
-        String [] answ = {"=== Create a new Item ====", "=== Delete item ===="};
-       startUI.init( new StubInput(answ),  tracker, acts);
-      StubAction stubAction  = new StubAction();
-            stubAction.execute(new StubInput(new String[]{}), tracker);
-        String expect = new StringJoiner(System.lineSeparator())
-                .add( answ[0].toString() + System.lineSeparator())
-               .toString();
+           String [] answ = {"0"};
+            UserAction[] acts = {new ExitAction()};
+           //  startUI.init( new StubInput({"0"}),  tracker, acts);
+           startUI.init( new StubInput(answ),  tracker, acts);
+            String expect = new StringJoiner(System.lineSeparator(), "",
+                    System.lineSeparator() )
+                    .add("Menu.")
+                    .add( "0. ====== Exit =======")
+                    .toString();
         assertThat(new String(out2.toByteArray()), is(expect));
         System.setOut(def);
     }
-
-
 }
