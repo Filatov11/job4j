@@ -2,7 +2,7 @@ package ru.job4j.trackersingleton;
 import java.util.Arrays;
 import java.util.Random;
 //import ru.job4j.tracker.Items;
-public class TrackerSingle {
+ public  final class TrackerSingle {
     private final Items[] items = new Items[100];
     private int position = 0;
     private final Items[] itemss = new Items[100];
