@@ -16,7 +16,7 @@ public class ConvertList2Array {
         for (Integer num : list) {
             cell = (counter % (groups));
             array[row][cell] = num;
-            if ((cell == (groups-1))) {
+            if ((cell == (cells-1))) {
                 row++;
             }
             counter++;
