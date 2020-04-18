@@ -9,17 +9,14 @@ import java.util.ArrayList;
 
 
 public class Tracker {
-  //  private final Items[] items = new Items[100];
-   private ArrayList<Items>  itemsList = new ArrayList<>();
+   private List<Items>  itemsList = new ArrayList<>();
     private int position = 0;
-    private final Items[] itemss = new Items[100];
     public int getPosition() {
         return position;
     }
   public Items add(Items items) {
         itemsList.add(items);
       items.setId(this.generateId());
-   //   this.itemss[this.position++] = items;
       return items;
   }
     public String generateId() {
@@ -53,14 +50,14 @@ public class Tracker {
 
 
    //// -----------------
-    public ArrayList<Items> findAll() {
+    public List<Items> findAll() {
         return this.itemsList;
     }
 
     //// -----------------
-    public ArrayList<Items> findByName(String key) {
+    public List<Items> findByName(String key) {
         int cnt = 0;
-        ArrayList<Items> temp =  new ArrayList<>();
+        List<Items> temp =  new ArrayList<>();
         for ( Items itm : itemsList ) {
             if (itm.getName() == key) { temp.add(itm); }
         }
@@ -73,7 +70,7 @@ public class Tracker {
       Items ret = new Items(null);
         for ( Items itm : itemsList ) {
             if (itm.getId() == id) { ret = itm; break; }
-            pos++;
+          //  pos++;
         }
         return ret;
     }
