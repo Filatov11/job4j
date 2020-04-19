@@ -9,7 +9,7 @@ public class StartUI {
        while (run) {
          this.showMenu(actions);
            int select = input.askInt("Select");
-           UserAction action = actions.;
+           UserAction action =  new ShowAction();
            run = action.execute(input, tracker);
        }
    }
@@ -29,12 +29,12 @@ public class StartUI {
       List<UserAction> actions = new ArrayList<>();
       actions.add(new CreateAction());
       actions.add(new ShowAction());
-      actions.add(new FindIdAction);
-      actions.add(new ReplaceAction);
+      actions.add(new FindIdAction());
+      actions.add(new ReplaceAction());
       actions.add(new DeleteAction());
       actions.add(new FindIdAction());
       actions.add(new FindNameAction());
-      actions.add(new ExitAction);
+      actions.add(new ExitAction());
 
        new StartUI().init(validate, tracker, actions);
    }
