@@ -10,7 +10,7 @@ public class ReplaceAction implements UserAction {
     public boolean execute(Input input, Tracker tracker) {
         String idRep = input.askStr("Enter id ");
         if (tracker.replace(idRep, tracker.findById(idRep))) {
-            System.out.println("Sucsessful replacing ");
+            System.out.println("Sucsessful replacing " + "Id: " + idRep + ", Name: " + tracker.findById(idRep).getName());
         } else {
             System.out.println("Unable to replace ");
         }

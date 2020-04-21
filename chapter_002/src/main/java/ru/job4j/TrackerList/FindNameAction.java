@@ -12,10 +12,10 @@ public class FindNameAction implements UserAction {
     @Override
     public boolean execute(Input input, Tracker tracker) {
         String name = input.askStr("Enter NAME of item to find: ");
-        List<Items> itemsFindedByNAME =  new ArrayList<>();// new Items[tracker.getPosition()];
+        List<Item> itemsFindedByNAME =  new ArrayList<>();
         itemsFindedByNAME = tracker.findByName(name);
-        for (Items value : itemsFindedByNAME) {
-            System.out.println(value.getName());
+        for (Item value : itemsFindedByNAME) {
+            System.out.println("Name: " + value.getName() + " " + ",  Id: " + value.getId());
         }
         return false;
     }

@@ -1,22 +1,22 @@
 package ru.job4j.TrackerList;
 
-import ru.job4j.tracker.Item;
-
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 import java.util.ArrayList;
 
 
 public class Tracker {
-   private List<Items>  itemsList = new ArrayList<>();
-    private int position = 0;
-    public int getPosition() {
-        return position;
-    }
-  public Items add(Items items) {
-        itemsList.add(items);
+   private final List<Item>  itemsList = new ArrayList<>();
+  //  private int position = 0;
+//    public int getPosition() {
+    //    return position;
+  ///  }
+  public Item add(Item items) {
       items.setId(this.generateId());
+      //items.setName();
+        itemsList.add(items);
+
+
       return items;
   }
     public String generateId() {
@@ -29,7 +29,7 @@ public class Tracker {
     public  boolean delete(String id) {
         boolean res = false;
         int pos = 0;
-        for ( Items itm : itemsList ) {
+        for ( Item itm : itemsList ) {
             if (itm.getId() == id) { itemsList.remove(pos) ; res = true; break; }
             pos++;
         }
@@ -37,10 +37,10 @@ public class Tracker {
     }
 
 
-    public boolean replace(String id, Items item) {
+    public boolean replace(String id, Item item) {
         boolean res = false;
         int pos = 0;
-        for ( Items itm : itemsList ) {
+        for ( Item itm : itemsList ) {
             if (itm.getId() == id) { itemsList.set(pos, item) ; res = true; break; }
             pos++;
         }
@@ -50,15 +50,15 @@ public class Tracker {
 
 
    //// -----------------
-    public List<Items> findAll() {
+    public List<Item> findAll() {
         return this.itemsList;
     }
 
     //// -----------------
-    public List<Items> findByName(String key) {
+    public List<Item> findByName(String key) {
         int cnt = 0;
-        List<Items> temp =  new ArrayList<>();
-        for ( Items itm : itemsList ) {
+        List<Item> temp =  new ArrayList<>();
+        for ( Item itm : itemsList ) {
             if (itm.getName() == key) { temp.add(itm); }
         }
         return temp;
@@ -66,9 +66,9 @@ public class Tracker {
 
 
 
-    public Items findById(String id) {
-      Items ret = new Items(null);
-        for ( Items itm : itemsList ) {
+    public Item findById(String id) {
+      Item ret = new Item(null);
+        for ( Item itm : itemsList ) {
             if (itm.getId() == id) { ret = itm; break; }
           //  pos++;
         }

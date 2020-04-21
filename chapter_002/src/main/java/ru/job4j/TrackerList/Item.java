@@ -1,6 +1,6 @@
 package ru.job4j.TrackerList;
 
-public class Items {
+public class Item {
 
     private String id;
     private String name;
@@ -21,13 +21,13 @@ public class Items {
         this.name = name;
     }
 
-    public  Items(String name) {
+    public Item(String name) {
         this.name = name;
     }
 
 
- //  public  Items add(Items items) {
- //      items.setId(this.generateId());
+ //  public  Item add(Item items) {
+  //   items.setId(this.generateId());
  //      this.items[this.position++] = items;
   //     return items;
  /////   }
