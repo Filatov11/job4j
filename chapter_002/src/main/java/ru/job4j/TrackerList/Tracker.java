@@ -27,24 +27,24 @@ public class Tracker {
 
 
     public  boolean delete(String id) {
-        boolean res = false;
-        int pos = 0;
-        for ( Item itm : itemsList ) {
-            if (itm.getId() == id) { itemsList.remove(pos) ; res = true; break; }
-            pos++;
-        }
-        return res;
+       int index = indexOf(id);
+       if ( index == -1) {
+           return  false;
+       }
+       itemsList.remove(index);
+       return true;
     }
 
 
     public boolean replace(String id, Item item) {
-        boolean res = false;
-        int pos = 0;
-        for ( Item itm : itemsList ) {
-            if (itm.getId() == id) { itemsList.set(pos, item) ; res = true; break; }
-            pos++;
-        }
-        return res;
+     int index = indexOf(id);
+     if (index == -1) {
+         return false;
+     }
+     item.setId(id);
+     itemsList.set(index, item);
+     return true;
+
     }
 
 
@@ -59,7 +59,9 @@ public class Tracker {
         int cnt = 0;
         List<Item> temp =  new ArrayList<>();
         for ( Item itm : itemsList ) {
-            if (itm.getName() == key) { temp.add(itm); }
+            if (itm.getName().equals(key)) {
+                temp.add(itm);
+            }
         }
         return temp;
     }
@@ -67,12 +69,21 @@ public class Tracker {
 
 
     public Item findById(String id) {
-      Item ret = new Item(null);
-        for ( Item itm : itemsList ) {
-            if (itm.getId() == id) { ret = itm; break; }
-          //  pos++;
-        }
-        return ret;
+        int index = indexOf(id);
+        return index != -1 ? itemsList.get(index) : null;
     }
+
+     private int indexOf(String id) {
+      int index = -1;
+      for (int i = 0; i < itemsList.size(); i++) {
+         if  (itemsList.get(i).getId().equals(id)) {
+             index = i;
+             break;
+         }
+
+      }
+      return index;
+     }
+
 
 }
