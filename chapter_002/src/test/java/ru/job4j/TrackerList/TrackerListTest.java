@@ -1,7 +1,5 @@
 package ru.job4j.TrackerList;
 import org.junit.Test;
-import ru.job4j.TrackerList.Item;
-import ru.job4j.TrackerList.Tracker;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -19,7 +17,7 @@ public class TrackerListTest {
         tracker.add(item2);
         Item item3 = new Item("Item1");
         tracker.add(item3);
-        Collections.sort(tracker.findAll(), new ru.job4j.TrackerList.SortByItems());
+        Collections.sort(tracker.findAll(), new SortAscByNameItem());
         List<Item> temp =  new ArrayList<>();
         temp = tracker.findAll();
         String str = "";
@@ -40,7 +38,7 @@ public class TrackerListTest {
         tracker.add(item2);
         Item item3 = new Item("Item1");
         tracker.add(item3);
-        Collections.sort(tracker.findAll(), new ru.job4j.TrackerList.SortByItemsReverse());
+        Collections.sort(tracker.findAll(), new SortDescByNameItem());
         List<Item> temp =  new ArrayList<>();
         temp = tracker.findAll();
         String str = "";
