@@ -11,9 +11,7 @@ public class JobTest {
         Comparator<Job> cmpNamePriority = new JobDescByName().thenComparing(new JobDescByPriority());
         int rsl = cmpNamePriority.compare(
                 new Job("Impl task", 0),
-
-
-                       new Job("Impl task", 0)
+                new Job("Impl task", 0)
         );
         assertThat(rsl, is(0));
     }
