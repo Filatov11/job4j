@@ -5,15 +5,26 @@ public class User implements Comparable<User> {
     private String name;
     private int age;
 
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
     public User(String name, int age) {
         this.age = age;
         this.name = name;
     }
     @Override
     public int compareTo(User o) {
-        if (!(this.name.equals(o.name))) {
-            return Integer.compare(age, o.age); }
-        else return  0;
+        int result = this.getName().compareTo(o.getName());
+        if (result == 0) { return Integer.compare(age, o.age);}
+        else { return  result;}
+    //    if (!(this.name.equals(o.name))) {
+      //      return Integer.compare(age, o.age); }
+   //     else return  0;
     }
     @Override
     public boolean equals(Object o){
