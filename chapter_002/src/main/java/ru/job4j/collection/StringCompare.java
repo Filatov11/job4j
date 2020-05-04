@@ -8,7 +8,7 @@ public class StringCompare implements Comparator<String> {
     @Override
     public int compare(String left, String right) {
         int lengthString = Math.min(left.length(), right.length());
-        int val = 0;
+        int val = Integer.compare(left.length(), right.length());
         char leftChar;
         char rightChar;
         for (int i = 0; i < lengthString; i++) {
@@ -17,9 +17,6 @@ public class StringCompare implements Comparator<String> {
                 break;
             }
         }
-      //  if (val == 0) { if (left.length() > right.length()) {return 1;} else {return  -1;} }
-        if (val == 0) { if (left.length() == right.length()) {return 0;}  else
-        { if (left.length() > right.length()) {return 1;} else {return  -1;} }}
 
         return val;
     }
