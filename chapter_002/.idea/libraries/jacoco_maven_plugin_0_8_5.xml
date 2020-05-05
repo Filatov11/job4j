@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jacoco-maven-plugin-0.8.5">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../jacoco/jacoco-maven-plugin-0.8.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

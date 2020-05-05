@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="Maven: org.hamcrest:hamcrest-all:1.3">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-all/1.3/hamcrest-all-1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jacoco/jacoco-maven-plugin-0.8.5.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-all/1.3/hamcrest-all-1.3-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jacoco/jacoco-0.8.5.zip!/doc/api" />
+      <root url="jar://$USER_HOME$/jacoco-0.8.2.zip!/doc/api" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-all/1.3/hamcrest-all-1.3-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jacoco/jacoco-0.8.5.zip!/doc/examples/build/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/../../jacoco/jacoco-0.8.5.zip!/doc/examples/build/src/test/java" />
+      <root url="jar://$USER_HOME$/jacoco-0.8.2.zip!/doc/examples/build/src/main/java" />
+      <root url="jar://$USER_HOME$/jacoco-0.8.2.zip!/doc/examples/build/src/test/java" />
+    </SOURCES>
+  </library>
+</component>
