@@ -4,7 +4,7 @@ import org.junit.Test;
 
 public class SingletonTest {
     @Test
-    public void TestSingletonObject(){
+    public void testSingletonObject() {
 
         Tracker instance1 = SingleStartUI.getInstance();
         Tracker instance2 = SingleStartUI.getInstance();
@@ -14,7 +14,7 @@ public class SingletonTest {
     }
 
     @Test
-    public void TestgetInstance(){
+    public void testgetInstance() {
 
         Tracker instance1 = SingleStartUI.getInstance();
         Tracker instance2 = SingleStartUI.getInstance();

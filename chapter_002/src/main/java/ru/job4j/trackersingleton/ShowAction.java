@@ -8,7 +8,7 @@ public class ShowAction implements UserAction {
 
     @Override
     public boolean execute(Input input, TrackerSingle trackerSingle) {
-        Items[] items = trackerSingle.findAll() ;
+        Items[] items = trackerSingle.findAll();
         for (Items items1 : items) {
             System.out.println(items1.getName());
         }

@@ -20,7 +20,7 @@ public class FindAllActionTest {
         ShowAction act = new ShowAction();
         act.execute(new StubInput(new String[]{}), tracker);
         String expect = new StringJoiner(System.lineSeparator())
-                .add( items.getName() + System.lineSeparator())
+                .add(items.getName() + System.lineSeparator())
                 .toString();
         assertThat(new String(out.toByteArray()), is(expect));
         System.setOut(def);
@@ -38,9 +38,9 @@ public class FindAllActionTest {
         tracker.add(items2);
         FindNameAction act = new FindNameAction();
         act.execute(new StubInput(new String[]{"fix1bug"}), tracker);
-        System.out.println (items1.getName());
+        System.out.println(items1.getName());
        String expect = new StringJoiner(System.lineSeparator())
-                .add( items1.getName() + System.lineSeparator())
+                .add(items1.getName() + System.lineSeparator())
                .toString();
        assertThat(new String(out1.toByteArray()), is(expect));
         System.setOut(def);
@@ -62,14 +62,14 @@ public class FindAllActionTest {
         Items items = new Items("fix bug");
         tracker.add(items);
         StartUI startUI = new StartUI();
-           String [] answ = {"0"};
+           String[] answ = {"0"};
             UserAction[] acts = {new ExitAction()};
            //  startUI.init( new StubInput({"0"}),  tracker, acts);
-           startUI.init( new StubInput(answ),  tracker, acts);
+           startUI.init(new StubInput(answ),  tracker, acts);
             String expect = new StringJoiner(System.lineSeparator(), "",
-                    System.lineSeparator() )
+                    System.lineSeparator())
                     .add("Menu.")
-                    .add( "0. ====== Exit =======")
+                    .add("0. ====== Exit =======")
                     .toString();
         assertThat(new String(out2.toByteArray()), is(expect));
         System.setOut(def);

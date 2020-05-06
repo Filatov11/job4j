@@ -1,11 +1,12 @@
 package ru.job4j.ex;
 
 public class Fact {
-    public static void main(String[] args ) {
-  int fact_num = -2;
-  if (fact_num < 0)  {throw new  IllegalArgumentException ("fact_num is negative"); }
-    else {
-        System.out.println("rls = " + calc(fact_num) + ";");
+    public static void main(String[] args) {
+  int factNum = -2;
+  if (factNum < 0)  {
+      throw new  IllegalArgumentException("factNum is negative");
+  } else {
+        System.out.println("rls = " + calc(factNum) + ";");
        }
     }
     public static int calc(int n) {

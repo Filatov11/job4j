@@ -3,18 +3,21 @@ package ru.job4j.singleton;
 public class StaticBlockSingleton {
     private static StaticBlockSingleton instance;
 
-    private StaticBlockSingleton(){}
+    private StaticBlockSingleton() {
+
+    }
 
     //static block initialization for exception handling
-    static{
-        try{
+    static {
+        try {
             instance = new StaticBlockSingleton();
-        }catch(Exception e){
+        } catch (Exception e) {
             throw new RuntimeException("Exception occured in creating singleton instance");
         }
     }
 
-    public static StaticBlockSingleton getInstance(){
+    public static StaticBlockSingleton getInstance() {
+
         return instance;
     }
 }

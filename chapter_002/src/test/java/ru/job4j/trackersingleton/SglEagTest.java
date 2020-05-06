@@ -7,7 +7,7 @@ import ru.job4j.tracker.Tracker;
 
 public class SglEagTest {
     @Test
-    public void TestSingletonObject(){
+    public void testSingletonObject() {
 
         Tracker instance1 = SingleStartUI.getInstance();
         Tracker instance2 = SingleStartUI.getInstance();

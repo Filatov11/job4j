@@ -9,13 +9,11 @@ public void  add(Person person) {
     public ArrayList<Person> find(String key) {
         ArrayList<Person> result = new ArrayList<Person>();
         for (Person i: persons) {
-            if  ( (i.getSurname().contains(key)) ||
-                    (i.getName().contains(key)) ||
-                    (i.getPhone().contains(key)) ||  (i.getAddress().contains(key))) {
+            if  ((i.getSurname().contains(key)) || (i.getName().contains(key))
+                    || (i.getPhone().contains(key)) ||  (i.getAddress().contains(key))) {
                 result.add(i);
             }
-
-           };
+           }
         return result;
         }
 

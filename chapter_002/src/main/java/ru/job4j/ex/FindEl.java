@@ -3,8 +3,9 @@ package ru.job4j.ex;
 public class FindEl {
     public static void main(String[] args) {
         String[] searchArray = {"object", "search", "word"};
-        try {   int index;
-            index=indexOf(searchArray, "Smith");
+        try {
+            int index;
+            index = indexOf(searchArray, "Smith");
         } catch (ElementNotFoundException e) {
            e.printStackTrace();
         }
@@ -14,7 +15,7 @@ public class FindEl {
         boolean searchArrayResult = false;
 
 
-        for (int i=0 ; i <= value.length-1; i++){
+        for (int i = 0; i <= value.length - 1; i++) {
             //rsl++;
             if (value[i].equals(key)) {
                 rsl = i;
@@ -25,10 +26,11 @@ public class FindEl {
         }
        // if (!searchArrayResult) { rsl=-1;}
 
-        if ( rsl==-1) {
+        if (rsl == -1) {
             throw new ElementNotFoundException("Element id not found");
+        } else {
+            return rsl;
         }
-        else {return rsl;}
     }
 
     public static boolean sent(String value, String[] abuses) throws ElementAbuseException {

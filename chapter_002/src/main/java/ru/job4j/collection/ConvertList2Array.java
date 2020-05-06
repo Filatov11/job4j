@@ -12,11 +12,11 @@ public class ConvertList2Array {
 
         int groups = (int) Math.ceil((double) list.size() / cells);
         int[][] array = new int[groups][cells];
-        int row = 0, cell = 0,  counter =0;
+        int row = 0, cell = 0,  counter = 0;
         for (Integer num : list) {
             cell = (counter % (groups));
             array[row][cell] = num;
-            if ((cell == (cells-1))) {
+            if ((cell == (cells - 1))) {
                 row++;
             }
             counter++;
