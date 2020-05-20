@@ -1,9 +1,17 @@
 package ru.job4j.array;
 
+/**.
+ * Check
+ */
 public class Check {
     boolean etalon;
 
-    public boolean mono(boolean[] data) {
+    /**
+     *
+     * @param data dt
+     * @return ret
+     */
+    public final boolean mono(final boolean[] data) {
         etalon = data[0];
         boolean result = false;
         for (int i = 1; i < data.length; i++) {

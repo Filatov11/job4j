@@ -1,7 +1,18 @@
 package condition;
 
+/**.
+ * Sqmax
+ */
 public class Sqmax {
-    public static int max(int first, int second, int third, int forth) {
+    /**
+     *
+     * @param first fs
+     * @param second sc
+     * @param third th
+     * @param forth ft
+     * @return ret
+     */
+    public final static int max(int first, int second, int third, int forth) {
         int result = forth;
         if (first > second) {
             if (first > third) {

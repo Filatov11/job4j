@@ -1,7 +1,13 @@
 package oop;
 
+/**.
+ * Story
+ */
 public class Story {
-    public static void main(String[] args) {
+    /**
+     * @param args a
+     */
+    public static void main(final String[] args) {
         Pioneer petya = new Pioneer();
         Wolf wolf = new Wolf();
         Girl girl = new Girl();

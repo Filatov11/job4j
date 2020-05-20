@@ -1,8 +1,16 @@
 package ru.job4j.abstractfactory;
 
+/**
+ * ShapeFactory
+ */
 public class ShapeFactory {
     private final ShapeAbstFactory factory;
-    public ShapeFactory(ShapeAbstFactory factory) {
+
+    /**
+     *
+     * @param factory fc
+     */
+    public final ShapeFactory(ShapeAbstFactory factory) {
         this.factory = factory;
     }
 

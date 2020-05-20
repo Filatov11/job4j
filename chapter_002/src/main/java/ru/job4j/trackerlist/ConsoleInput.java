@@ -1,21 +1,39 @@
 package ru.job4j.trackerlist;
 
 import java.util.Scanner;
-
+/**.
+ * ConsoleInput
+ */
 public class ConsoleInput implements Input {
     private Scanner scanner = new Scanner(System.in);
 
+    /**
+     *
+     * @param question qs
+     * @return ret
+     */
     @Override
     public String askStr(String question) {
         System.out.println(question);
         return scanner.nextLine();
     }
 
+    /**
+     *
+     * @param question q
+     * @return ret
+     */
     @Override
-    public int askInt(String question) {
+    public final int askInt(final String question) {
         return Integer.valueOf(askStr(question));
     }
 
+    /**
+     *
+     * @param question qs
+     * @param max m
+     * @return ret
+     */
     @Override
     public int askInt(String question, int max) {
         int select = askInt(question);
@@ -25,7 +43,12 @@ public class ConsoleInput implements Input {
         return select;
     }
 
-    public String askId(String question) {
+    /**
+     *
+      * @param question qs
+     * @return ret
+     */
+    public final String askId(String question) {
         System.out.println(question);
         return scanner.nextLine();
     }

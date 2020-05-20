@@ -4,9 +4,16 @@ import  java.util.Arrays;
 import  java.util.Collections;
 import java.util.List;
 import java.util.*;
-public class JobSorter {
 
-    public static void main(String[] args) {
+/**.
+ * JobSorter
+ */
+public class JobSorter {
+    /**
+     *
+     * @param args a
+     */
+    public final static void main(final String[] args) {
         List<Job> jobs = Arrays.asList(
                 new Job("Fix bug", 1),
                 new Job("Fix bug", 4),

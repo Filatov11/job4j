@@ -1,7 +1,14 @@
 package oop;
 
+/**.
+ * Jukebox
+ */
 public class Jukebox {
-    public  void  music(int position) {
+    /**
+     *
+     * @param position p
+     */
+    public final void  music(final int position) {
         if (position == 1) {
             System.out.println("Пусть бегут неуклюже");
         } else if (position == 2) {
@@ -11,8 +18,11 @@ public class Jukebox {
                 }
     }
 
-
-    public static void  main(String[] args) {
+    /**
+     *
+     * @param args a
+     */
+    public static void  main(final String[] args) {
         Jukebox petya = new Jukebox();
 
         petya.music(1);

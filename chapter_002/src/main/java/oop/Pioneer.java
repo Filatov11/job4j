@@ -1,7 +1,13 @@
 package oop;
 
+/**
+ * Pioneer
+ */
 public class Pioneer {
-    public  void kill(Wolf wolf) {
+    /**
+     * @param wolf w
+     */
+    public final void kill(final Wolf wolf) {
 
     }
 

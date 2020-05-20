@@ -1,7 +1,14 @@
 package oop;
 
+/**.
+ * College
+ */
 public class College {
-    public static void main(String[] args) {
+    /**
+     *
+     * @param args a
+     */
+    public static void main(final String[] args) {
    Freshman freshman = new Freshman();
    // понижение типа
    Students students = (Students) freshman;

@@ -1,7 +1,16 @@
 package ru.job4j.array;
 
+/**.
+ * Arraychar
+ */
 public class Arraychar {
-    public static boolean startsW(char[] word, char[] pref) {
+    /**
+     *
+     * @param word er
+     * @param pref pr
+     * @return tret
+     */
+    public final static boolean startsW(final char[] word, final char[] pref) {
         boolean result = false;
         //
         // if (word.length > pref.length) {

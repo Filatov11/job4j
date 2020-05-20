@@ -1,7 +1,14 @@
 package oop;
 
-public class Wolf {
-    public  void eat(Girl girl) {
+/**.
+ * Wolf
+ */
+public final class Wolf {
+    /**
+     *
+     * @param girl q
+     */
+    public  void eat(final Girl girl) {
 
     }
 

@@ -1,7 +1,10 @@
 package oop;
 
+/**.
+ * BallStory
+ */
 public class BallStory {
-    static public  void main(String[] args) {
+    static final public void main(final String[] args) {
         Hare hare = new Hare();
         Ball ball = new Ball();
         GreyWolf greyWolf = new GreyWolf();

@@ -1,7 +1,13 @@
 package oop;
 
+/**.
+ * Gill
+ */
 public class Girl {
-    public void help(Pioneer pioneer) {
+    /**
+     * @param pioneer s
+     */
+    public final void help(final Pioneer pioneer) {
 
     }
 }

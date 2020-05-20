@@ -1,22 +1,52 @@
 package oop;
-
+/**.
+ * Cat
+ */
 public class Cat {
+    /**.
+     * food f
+     * name n
+     */
     private String food, name;
-    public void show() {
+
+    /**
+     * show
+     */
+    public final void show() {
         System.out.println(this.food);
         System.out.println(this.name);
     }
-    public String sound() {
+
+    /**
+     *
+     * @return voice v
+     */
+    public final String sound() {
         String voice = "may-may";
         return voice;
     }
-    public void eat(String meat) {
+
+    /**
+     *
+     * @param meat m
+     */
+    public final void eat(final String meat) {
         this.food = meat;
     }
-    public void giveNick(String nick) {
+
+    /**
+     *
+     * @param nick ni
+     */
+    public final void giveNick(final String nick) {
         this.name = nick;
     }
-    public static void main(String[] args) {
+
+    /**
+     *
+     * @param args a
+     */
+    public static void main(final String[] args) {
         Cat peppy = new Cat();
         String say = peppy.sound();
         System.out.println("Peppy says " + say);

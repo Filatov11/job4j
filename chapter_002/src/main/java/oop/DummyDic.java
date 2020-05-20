@@ -1,10 +1,17 @@
 package oop;
 
+/**.
+ * DummyDic
+ */
 public class DummyDic {
-    public void engToRus(String eng) {
+    /**
+     *
+     * @param eng qq
+     */
+    public final void engToRus(final String eng) {
         System.out.println("Неизвестное слово. " + eng);
     }
-    public static  void main(String[] args) {
+    public static  void main(final String[] args) {
         DummyDic dictionary = new DummyDic();
         dictionary.engToRus("Word");
     }

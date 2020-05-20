@@ -1,15 +1,23 @@
-package task1;
+package task;
 
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
+/**.
+ * class Convert
+ */
 public class Convert {
+    /**.
+     */
     public Convert() {
     }
     //Converts array to list
-    List<Integer> makeList(int[][] array) {
+    /**
+     * @param array array
+     * @return list list
+     */
+    final List<Integer> makeList(final int[][] array) {
         ArrayList<Integer> list = new ArrayList<>();
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
@@ -19,9 +27,14 @@ public class Convert {
         return list;
     }
     //Converts list to array
-    public int[][] makeArray(List<Integer> list, int rws) {
+    /**
+     * @param list list
+     *  @param rws rws
+     * @return array array
+     */
+    public final int[][] makeArray(final List<Integer>  list, final int rws) {
         Iterator<Integer> iterator = list.iterator();
-        int cls = list.size() / rws + (list.size() % rws == 0 ? 0 : 1);
+        int cls = (list.size() / rws + (list.size() % rws == 0 ? 0 : 1));
         int[][] array = new int[rws][cls];
         for (int i = 0; i < rws; i++) {
             for (int j = 0; j < cls; j++) {

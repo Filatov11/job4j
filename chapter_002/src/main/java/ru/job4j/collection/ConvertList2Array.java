@@ -3,8 +3,17 @@ package ru.job4j.collection;
 import java.util.ArrayList;
 import java.util.List;
 
+/**.
+ * ConvertList2Array
+ */
 public class ConvertList2Array {
-    public static int[][] toArray(List<Integer> list, int cells) {
+    /**
+     *
+     * @param list ls
+     * @param cells cl
+     * @return r
+     */
+    public final static int[][] toArray(List<Integer> list, int cells) {
         //    int groups = list.size() / cells;
         //   System.out.println(groups);
         //   int[][] array = new int[groups][cells];
@@ -24,7 +33,7 @@ public class ConvertList2Array {
         return array;
     }
 
-    public static void main(String[] args) {
+    public final static void main(final String[] args) {
         //  List<Integer> listNumbers = new List.of(1, 2, 3, 4, 5, 6);
         List<Integer> list = new ArrayList<>();
         list.add(1);
