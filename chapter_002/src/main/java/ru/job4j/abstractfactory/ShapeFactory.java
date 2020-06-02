@@ -10,7 +10,7 @@ public class ShapeFactory {
      *
      * @param factory fc
      */
-    public final ShapeFactory(ShapeAbstFactory factory) {
+    public  ShapeFactory(ShapeAbstFactory factory) {
         this.factory = factory;
     }
 

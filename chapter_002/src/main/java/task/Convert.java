@@ -20,8 +20,8 @@ public class Convert {
     final List<Integer> makeList(final int[][] array) {
         ArrayList<Integer> list = new ArrayList<>();
         for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                list.add(array[i][j])
+            for (int j = 0; j < array[0].length; j++) {
+                list.add(array[i][j]);
             }
         }
         return list;
@@ -39,9 +39,9 @@ public class Convert {
         for (int i = 0; i < rws; i++) {
             for (int j = 0; j < cls; j++) {
                 if (iterator.hasNext()) {
-                    array[i][j] = iterator.next()
+                    array[i][j] = iterator.next();
                 }  else {
-                    array[i][j] = 0
+                    array[i][j] = 0;
                 }
             }
         }

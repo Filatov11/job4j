@@ -1,13 +1,29 @@
 package ru.job4j.condition;
 
 @SuppressWarnings("ALL")
-public class Max {
-    public static int max(int left, int right) {
+public final class Max {
+    private Max() {
+        // never
+    }
+
+    /**
+     * @param left l
+     * @param right r
+     * @return ret
+     */
+    public static int max(final int left, final int right) {
         int result = left;
         result = left < right ? right : left;
         return result;
     }
-    public static int max(int left, int right, int middle) {
+
+    /**
+     * @param left l
+     * @param right r
+     * @param middle m
+     * @return ret
+     */
+    public static int max(final int left, final int right, final int middle) {
         int result = left;
        // result = left < max(right,middle) ? max(right,middle) : left;
         result = max(max(left, right), middle);
@@ -24,18 +40,18 @@ public class Max {
       //  return result;
     }
 
-    public static int max(int left, int right, int middle, int four) {
+    /**
+     * @param left l
+     * @param right r
+     * @param middle m
+     * @param four f
+     * @return ret
+     */
+    public static int max(final int left, final int right,
+                          final int middle, final int four) {
         int result = left;
-     // result = max(max(right,middle),four) < left ? left: max(max(right,middle),four) ;
         result = max(max(right, middle), max(four, left));
         return result;
-    //    int maxval;
-   //     if ((left > right) && (left > middle) && (left > four)) {
-   //         maxval = left;}
-   //     else if ((right > left) && (right > middle) && (right > four)) { maxval = right;}
-    //    else if ((middle > left) && (middle > right) &&  (middle > four)) { maxval = middle;}
-    //    else maxval = four;
-    //    return  maxval;
     }
 
 }

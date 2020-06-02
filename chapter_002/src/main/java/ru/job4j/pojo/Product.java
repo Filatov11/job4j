@@ -1,27 +1,44 @@
 package ru.job4j.pojo;
 
 public class Product {
+    /**.
+     * name
+     */
     private  String name;
+    /**.
+     * count
+     */
     private int count;
-    public Product(String name, int count) {
-        this.count = count;
-        this.name = name;
+    /**
+     * @param name1  nm
+     * @param count1 cn
+     */
+    public Product(final String name1, final int count1) {
+        this.count = count1;
+        this.name = name1;
     }
+    /**
+     * @return name
+     */
     public String getName() {
         return name;
     }
-
-    public void setName(String name) {
-        this.name = name;
+    /**
+     * @param name1 name1
+     */
+    public void setName(final String name1) {
+        this.name = name1;
     }
-
+    /**
+     * @return count
+     */
     public int getCount() {
         return count;
     }
-
-    public void setCount(int count) {
-        this.count = count;
+    /**
+     * @param count1  q
+     */
+    public void setCount(final int count1) {
+        this.count = count1;
     }
-
-
 }

@@ -2,7 +2,7 @@ package ru.job4j.pojo;
 
 @SuppressWarnings("ALL")
 public class Shop {
-    public static Product[] delete(Product[] products, int index) {
+    public static Product[] delete(final Product[] products, final int index) {
         products[index] = null;
         int ii = index - 1;
         Product temp = products[index];
@@ -22,14 +22,15 @@ public class Shop {
         return products;
     }
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Product[] products = new Product[5];
         products[0] = new Product("Milk", 10);
         products[1] = new Product("Bread", 4);
         products[2] = new Product("Egg", 19);
 
         for (Product product : products) {
-            //проверяем, что объект не равен null. тк у нас массив не заполнен целиком.
+            //проверяем, что объект не равен
+            // null. тк у нас массив не заполнен целиком.
             if (product != null) {
                 System.out.println(product.getName());
             } else {
@@ -43,7 +44,8 @@ public class Shop {
         products[1] = null;
 
         for (Product product : products) {
-            //проверяем, что объект не равен null. тк у нас массив не заполнен целиком.
+            //проверяем, что объект не равен
+            // null. тк у нас массив не заполнен целиком.
             if (product != null) {
                 System.out.println(product.getName());
             } else {
@@ -52,13 +54,17 @@ public class Shop {
         }
 
         System.out.println();
-        System.out.println("Записываем  в ячейку с индексом 1 значение ячейки с индексом 2 и удаляем значение из ячейки с индексом 2");
-        //записываем в ячейку с индексом 1 значение ячейки с индексом 2.
+        System.out.println("Записываем  в ячейку с индексом 1 значение"
+                + "ячейки с индексом 2 и удаляем"
+                + "значение из ячейки с индексом 2");
+        //записываем в ячейку с индексом 1
+        // значение ячейки с индексом 2.
         products[1] = products[2];
         //удаляем значение из ячейки с индексом 2.
         products[2] = null;
         for (Product product : products) {
-            //проверяем, что объект не равен null. так как  у нас массив не заполнен целиком.
+            //проверяем, что объект не равен null.
+            // так как  у нас массив не заполнен целиком.
             if (product != null) {
                 System.out.println(product.getName());
             } else {
@@ -75,7 +81,8 @@ public class Shop {
         prod = delete(prod, 4);
 
         for (Product prod1 : prod) {
-            //проверяем, что объект не равен null. тк у нас массив не заполнен целиком.
+            //проверяем, что объект не равен null. тк у
+            // нас массив не заполнен целиком.
             if (prod1 != null) {
                 System.out.println(prod1.getName());
             } else {

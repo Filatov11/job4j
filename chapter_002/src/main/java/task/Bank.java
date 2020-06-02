@@ -1,4 +1,4 @@
- package task;
+package task;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
@@ -69,7 +69,6 @@ public class Bank {
                 && getActualAccount(user1, account1).transfer(
                 getActualAccount(user2, account2), amount);
     }
-
     /**
      ** @return toString
      */

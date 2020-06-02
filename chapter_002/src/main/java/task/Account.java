@@ -24,14 +24,12 @@ public class Account {
      * @return  val
      */
     public final  double getValues() {
-
         return this.values;
     }
     /**
      * @return re
      */
     public final String getReqs() {
-
         return this.reqs;
     }
 
@@ -77,7 +75,6 @@ public class Account {
      * @return ot
      */
     public  final int hashCode() {
-
         return this.reqs.hashCode();
     }
 }

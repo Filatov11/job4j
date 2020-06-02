@@ -18,10 +18,12 @@ public class Sorter {
      * @return sortedList sortedList
      */
   final   Set<User> sort(final List<User> list) {
-        TreeSet<User> sortedList = new TreeSet<>();
-        sortedList.addAll(list);
-        return sortedList;
-    }
+      TreeSet<User> sortedList = new TreeSet<>();
+      if (sortedList.addAll(list)) {
+          return sortedList;
+      } else
+      return null;
+  }
     /**
      * @param list list
      * @return sortedList

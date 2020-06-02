@@ -68,9 +68,9 @@
       </configuration>
       <executions>
         <execution>
-          <id>prepare-agent</id>
+          <id>default-jacoco-check</id>
           <goals>
-            <goal>prepare-agent</goal>
+            <goal>check</goal>
           </goals>
         </execution>
         <execution>

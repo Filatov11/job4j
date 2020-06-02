@@ -1,10 +1,22 @@
 package ru.job4j.condition;
 
-public class Chat {
-    public static void main(String[] args) {
-        String questionOne, questionTwo, questionThree, questionFour, questionFive;
+public final class Chat {
+    private Chat() {
+        //not called
+    }
+
+    /**
+     * @param args ar
+     */
+    public static void main(final String[] args) {
+        String questionOne;
+        String questionTwo;
+        String questionThree;
+        String questionFour;
+        String questionFive;
         questionOne = "Это я";
-        ru.job4j.condition.DummyBot bot = new ru.job4j.condition.DummyBot(questionOne);
+        ru.job4j.condition.DummyBot bot =
+                new ru.job4j.condition.DummyBot(questionOne);
         questionTwo = "Ха ха";
         System.out.println("I Say: " + questionTwo);
         System.out.println("Bot answer: " + bot.answer(questionTwo));

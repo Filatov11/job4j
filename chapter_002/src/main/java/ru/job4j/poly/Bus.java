@@ -3,11 +3,26 @@ import  java.util.Scanner;
 import static java.lang.String.*;
 
 public class Bus implements Transport {
+    /**
+     *
+     */
   private   double cache;
-private int capacity;
-private int gastankVolume;
-private  double dieselOilLevel = 0;
-private int passengerCount = 0;
+    /**
+     *
+     */
+    private int capacity;
+    /**
+     *
+     */
+    private int gastankVolume;
+    /**
+     *
+     */
+    private  double dieselOilLevel = 0;
+    /**
+     *
+     */
+    private int passengerCount = 0;
  Bus(int capacity, double cache) {
     this.capacity = capacity;
     this.cache = cache;
