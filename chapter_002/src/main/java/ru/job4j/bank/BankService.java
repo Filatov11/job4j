@@ -8,56 +8,58 @@ import java.util.Map;
 
 public class BankService {
     private Map<User, List<Account>> users = new HashMap<>();
+
     public void addUser(User user) {
         users.putIfAbsent(user, new ArrayList<Account>());
-        }
-
+    }
 
 
 
     public void addAccount(String passport, Account account) {
 
-        List<Account> oldAcc = new ArrayList<>();
-        List<Account> newAcc = new ArrayList<>();
-        User uk = new User();
-
-        for (User key : users.keySet()) {
-            //if
-            System.out.println(key + "=" + users.get(key));
-            oldAcc.addAll(users.get(key));
-            newAcc.add(account);
-            users.replace(key, oldAcc, newAcc);
-            final boolean add;
-
+        User uk = findByPassport(passport);
+      // if (!uk.equals(null)) {
+        List<Account> la = null;
+        la = users.get(uk);
+        la.add(account);
+        users.put(uk, la);
+        //users.putAll(uk.la);
+  //     }
         }
-    }
 
     public User findByPassport(String passport) {
       User us = null;
         for (User user : users.keySet()) {
-        if ((user.getPassport().equals(passport)))   {
-           us = user;
-        break;
+          //  System.out.println(user.getUsername() + "-- " + user.getPassport());
+        if (user.getPassport().equals(passport))   {
+           us = user; break;
         }
         }
-        System.out.println(us.getPassport() + " " + us.getUsername() );
         return  us;
     }
 
     public Account findByRequisite(String passport, String requisite) {
-     User ur = new User();
-     if (!(findByPassport(passport)).equals(null)) {
-         ur = findByPassport(passport);
-     }
-     int i = 0;
-        List<Account> listAcc = new ArrayList<>();
         Account val = null;
-        listAcc = users.get(ur);
-        for (Account account: listAcc) {
-           if (account.getRequisite().equals(requisite)) {
-               val = account; break;
-           }
+        List<Account> la = null;
+        if (!findByPassport(passport).equals(null)) {
+        User ruk = findByPassport(passport);
+  //      if (!ruk.equals(null)) {
+
+                 la = users.get(ruk);
+                 for (Account acc : la) {
+                     if (acc.getRequisite().equals(requisite)) {
+                         val = acc; break;
+                     }
+                 }
+
+    //    } else {
+    //        val = null;
+    //    }
+
+
+
         }
+
         return val;
         }
 
