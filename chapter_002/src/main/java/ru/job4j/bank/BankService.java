@@ -17,14 +17,16 @@ public class BankService {
 
     public void addAccount(String passport, Account account) {
 
-        User uk = findByPassport(passport);
-      // if (!uk.equals(null)) {
-        List<Account> la = null;
-        la = users.get(uk);
-        la.add(account);
-        users.put(uk, la);
-        //users.putAll(uk.la);
-  //     }
+
+        User user = findByPassport(passport);
+        if (user != null && !users.get(user).contains(account)) {
+            users.get(user).add(account);
+        }
+        //User uk = findByPassport(passport);
+      //  List<Account> la = null;
+      //  la = users.get(uk);
+      //  la.add(account);
+      //  users.put(uk, la);
         }
 
     public User findByPassport(String passport) {
@@ -39,27 +41,17 @@ public class BankService {
     }
 
     public Account findByRequisite(String passport, String requisite) {
+       User us = findByPassport(passport);
         Account val = null;
-        List<Account> la = null;
-        if (!findByPassport(passport).equals(null)) {
-        User ruk = findByPassport(passport);
-  //      if (!ruk.equals(null)) {
-
-                 la = users.get(ruk);
-                 for (Account acc : la) {
-                     if (acc.getRequisite().equals(requisite)) {
-                         val = acc; break;
-                     }
-                 }
-
-    //    } else {
-    //        val = null;
-    //    }
-
-
-
+        if (us != null) {
+            List<Account> la = null;
+            la = users.get(us);
+            for (Account acc : la ) {
+                if (acc.getRequisite().equals(requisite)) {
+                    val = acc; break;
+                }
+            }
         }
-
         return val;
         }
 
@@ -67,18 +59,33 @@ public class BankService {
     public boolean transferMoney(String srcPassport, String srcRequisite,
                                  String destPassport, String dеstRequisite, double amount) {
         boolean rsl = false;  double deltaSum;
-        List<Account> srcAcc = new ArrayList<>();
-        List<Account> destAcc = new ArrayList<>();
-
+        List<Account> listSrcAcc = null;
+        List<Account> listDestAcc = null;
+        double sumAccount;
+        String reqString;
         Account srcAccount = null;
         Account destAccount = null;
         srcAccount = findByRequisite(srcPassport, srcRequisite);
         destAccount = findByRequisite(destPassport, dеstRequisite);
-        User usSrc = new User();
-        User usDest = new User();
-       if ((srcAccount != null) && (destAccount != null))  {
-           rsl = true;
+        if (srcAccount != null)  {
+            sumAccount = srcAccount.getBalance();
+            reqString = srcAccount.getRequisite();
+
+            if  (sumAccount >= amount) {
+             //   listDestAcc = users.get(destAccount);
+           //     listDestAcc.add(new Account(reqString, amount));
+               // users.get(findByPassport(srcPassport)).add(new Account(reqString, amount));
+
+                users.get(findByPassport(srcPassport)).add(srcAccount);
+            }
+
         }
+
+
+
+    //   if ((srcAccount != null) && (destAccount != null))  {
+   //        rsl = true;
+   //     }
         return rsl;
     }
 }
