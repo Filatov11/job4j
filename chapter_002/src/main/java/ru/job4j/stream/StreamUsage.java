@@ -24,20 +24,20 @@ public class StreamUsage {
     }
 
     public static void main(String[] args) {
-        ArrayList <Integer> list = new ArrayList <Integer>();
-        list.addAll(Arrays.asList(new Integer[]{1,2,3,4,5,6,7,8,9}));
+  //      ArrayList <Integer> list = new ArrayList <Integer>();
+   //     list.addAll(Arrays.asList(new Integer[]{1,2,3,4,5,6,7,8,9}));
 
-        List<Integer> res =  list.stream().filter(i -> i > 0).collect(Collectors.toList());
+ //       List<Integer> res =  list.stream().filter(i -> i > 0).collect(Collectors.toList());
 
 
-        List<Task> tasks = List.of(
-                new Task("Bug #1", 100),
-                new Task("Task #2", 100),
-                new Task("Bug #3", 100)
-        );
-        List<Task> bugs = tasks.stream().filter(
-                task -> task.name.contains("Bug")
-        ).collect(Collectors.toList());
-        bugs.forEach(System.out::println);
-    }
+    //    List<Task> tasks = List.of(
+   //             new Task("Bug #1", 100),
+   //             new Task("Task #2", 100),
+   //             new Task("Bug #3", 100)
+   //     );
+   //     List<Task> bugs = tasks.stream().filter(
+   //             task -> task.name.contains("Bug")
+   //     ).collect(Collectors.toList());
+   //     bugs.forEach(System.out::println);
+   }
 }
