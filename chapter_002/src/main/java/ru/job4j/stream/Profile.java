@@ -5,14 +5,34 @@ import java.util.stream.Collectors;
 import java.util.function.Predicate;
 
 
-
-
 public class Profile {
 
     private Address address;
 
- //   List<Address> collect(List<Profile> profiles) {
-  ///      List<Profile> result = profiles.stream().filter(predict).collect(Collectors.toList());
-      //  return result;
-  //  }
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public String getClientName() {
+        return clientName;
+    }
+
+    public void setClientName(String clientName) {
+        this.clientName = clientName;
+    }
+
+    private String clientName;
+ public  Profile ( Address address ,String clientName ) {
+     this.address = address;
+     this.clientName = clientName;
+ }
+
+    public static   List<Profile> collect(List<Profile> profiles) {
+        List<Profile> result = profiles.stream().collect(Collectors.toList());
+        return result;
+    }
 }
