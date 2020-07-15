@@ -22,9 +22,9 @@ public class Profiles {
 
         //List<Address> clientAddress = new ArrayList<Address>();
 
-        List<Profile> coll = Profile.collect(clientProfile).stream().collect(Collectors.toList());
+        List<Address> coll = Profile.collect(clientProfile);
 
-        coll.stream().map(Profile::getClientName).forEach(System.out::println);
+        coll.stream().map(Address::getCity).forEach(System.out::println);
 
 
     }

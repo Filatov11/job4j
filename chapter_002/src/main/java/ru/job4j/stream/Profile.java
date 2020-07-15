@@ -31,8 +31,8 @@ public class Profile {
      this.clientName = clientName;
  }
 
-    public static   List<Profile> collect(List<Profile> profiles) {
-        List<Profile> result = profiles.stream().collect(Collectors.toList());
+    public static   List<Address> collect(List<Profile> profiles) {
+        List<Address> result = profiles.stream().map(Profile::getAddress).collect(Collectors.toList());
         return result;
     }
 }
