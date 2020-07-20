@@ -11,14 +11,6 @@ public class Profiles {
     public static void main(String args[]) {
         Profile profile = new Profile(new Address("Petrozavodsk", "Vesennaya", 11, 125), "Afonya");
 
-      //  Comparator<Address> byaddr = new  Comparator<Address>(
-       //         parent -> parent.equals()
-      //  );
-
-
-
-
-
         List<Profile> clientProfile = new ArrayList<Profile>
                 (Arrays.asList(
                         (new Profile(new Address("Petrozavodsk", "Vesennaya", 11, 127), "Afonya")),
@@ -30,16 +22,13 @@ public class Profiles {
                         (new Profile(new Address("Penza", "Severnaya", 8, 35), "Igor"))
                 ));
 
-        //List<Address> clientAddress = new ArrayList<Address>();
-
-        List<Address> coll = Profile.collect(clientProfile);
-
-        coll.stream().sorted(Comparator.comparing(Address::getCity)
-                .thenComparing(Address::getStreet).thenComparing(Address::getHome).thenComparing(Address::getApartment))
-                .map(Address::getCity).distinct().forEach(System.out::println);
-
-        //coll.stream().map(Address::getCity).forEach(System.out::println);
-
-
+        sortCity(clientProfile);
     }
+
+    public static void sortCity(List<Profile> clientProf) {
+        List<Address> coll = Profile.collect(clientProf);
+        coll.stream().sorted(Comparator.comparing(Address::getCity))
+                .map(Address::getCity).distinct().forEach(System.out::println);
+    }
+
 }
