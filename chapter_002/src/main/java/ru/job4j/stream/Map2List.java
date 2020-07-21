@@ -17,8 +17,8 @@ public class Map2List {
        );
         Stream<List<List<Integer>>> lg = Stream.of(matrix);
         System.out.println(
-                lg.flatMap(e -> e.stream()).collect(Collectors.toList());
-        );
+                lg.flatMap(e -> e.stream()).collect(Collectors.toList()));
+      //  );
 
     }
 }

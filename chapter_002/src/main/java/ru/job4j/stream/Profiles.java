@@ -26,9 +26,13 @@ public class Profiles {
     }
 
     public static void sortCity(List<Profile> clientProf) {
-        List<Address> coll = Profile.collect(clientProf);
-        coll.stream().sorted(Comparator.comparing(Address::getCity))
+ //       List<Address> coll = Profile.collect(clientProf);
+    //    coll.stream().sorted(Comparator.comparing(Address::getCity))
+   //             .map(Address::getCity).distinct().forEach(System.out::println);
+
+        Profile.collect(clientProf).stream().sorted(Comparator.comparing(Address::getCity))
                 .map(Address::getCity).distinct().forEach(System.out::println);
+
     }
 
 }
