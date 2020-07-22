@@ -22,15 +22,22 @@ public class Profiles {
                         (new Profile(new Address("Penza", "Severnaya", 8, 35), "Igor"))
                 ));
 
-        sortCity(clientProfile);
+
+        sortCity(clientProfile).stream()
+                .forEach(c -> System.out.println(c.getCity()));
     }
 
-    public static void sortCity(List<Profile> clientProf) {
 
-
-        Profile.collect(clientProf).stream().sorted(Comparator.comparing(Address::getCity))
-                .map(Address::getCity).distinct().forEach(System.out::println);
-
+    public static List <Address> sortCity(List<Profile> client) {
+        List<Address> retval = client.stream().map(n -> n.getAddress()).sorted((o1, o2) -> o1.getCity().compareTo(o2.getCity()))
+              .distinct().collect(Collectors.toList());
+        return retval;
     }
 
+
+    class CityComparator implements Comparator<Address> {
+        public int compare(Address a, Address b){
+            return a.getCity().compareTo(b.getCity());
+        }
+    }
 }

@@ -51,14 +51,20 @@ public class Address {
 
     @Override
     public boolean equals(Object addr) {
-        boolean result = false;
-        if (addr == this) {
-            result = true;
-        }
-        if (addr == null || addr.getClass() != this.getClass()) {
-            result = false;
-        }
-        return result;
+
+
+
+        if (this == addr)
+            return true;
+        if (addr == null)
+            return false;
+        if (getClass() != addr.getClass())
+            return false;
+        Address other = (Address) addr;
+        if (city != other.city)
+            return false;
+        return true;
+
     }
 
 
