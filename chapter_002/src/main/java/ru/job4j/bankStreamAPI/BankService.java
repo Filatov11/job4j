@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.Comparator;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class BankService {
     private Map<User, List<Account>> users = new HashMap<>();
@@ -28,8 +29,7 @@ public class BankService {
 
     public User findByPassport(String passport) {
         User us = null;
-
-        us =  users.keySet().stream().filter((x -> x.getPassport().equals(passport))).collect(Collectors.toList()).get(0);
+        us =  users.keySet().stream().filter((x -> x.getPassport().equals(passport))).findFirst().orElse(null);
 
    //     for (User user : users.keySet()) {
      //       if (user.getPassport().equals(passport)) {
@@ -41,11 +41,10 @@ public class BankService {
     }
 
     public Account findByRequisite(String passport, String requisite) {
-        User us = findByPassport(passport);
+        User us = Stream.of(findByPassport(passport)).filter(s -> s != null).findFirst().get();
         Account val = null;
         List<Account> la = users.get(us);
-        Account val = null;
-        val =  la.stream().filter(x -> x.getRequisite().equals(requisite)).collect(Collectors.toList()).get(0);
+        val =  la.stream().filter(x -> x.getRequisite().equals(requisite)).findFirst().orElse(null);
 
 
     //    if (us != null) {
