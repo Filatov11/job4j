@@ -1,4 +1,4 @@
-package ru.job4j.bankStreamAPI;
+package ru.job4j.bankstreamapi;
 
 import java.util.Objects;
 import java.util.Random;
