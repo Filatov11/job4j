@@ -39,12 +39,7 @@ public class Student  implements Comparable<Student>{
 
 
     public int compareTo(Student right) {
-        if (this.score == right.score) {
-            return 0;
-        } else if (this.score < right.score) {
-            return -1;
-        } else {
-            return 1;
-        }
+      return   Integer.compare(this.score, right.score);
+
     }
 }
