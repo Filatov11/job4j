@@ -16,12 +16,8 @@ public void  add(Person person) {
         Predicate<Person> predicatePhone = t -> t.getPhone().contains(key);
         Predicate<Person> combine =
                 predicateName.or(predicateName.or(predicateSurname.or(predicateAddress.or(predicatePhone))));
-      //  result =
 
-    //    Predicate<Person> combine =  t -> t.getName().contains(key) ||
-       //             t.getSurname().contains(key) || t.getAddress().contains(key)
-       //            || t.getPhone().contains(key);
-   //     ArrayList<Person> result = new ArrayList<Person>();
+
         for (Person person : persons) {
             if (combine.test(person)) {
                 result.add(person);
@@ -31,16 +27,6 @@ public void  add(Person person) {
         }
 
 
- //   public ArrayList<Person> find(String key) {
-   //     ArrayList<Person> result = new ArrayList<Person>();
-  //      for (Person i: persons) {
-  ///          if  ((i.getSurname().contains(key)) || (i.getName().contains(key))
-  //                  || (i.getPhone().contains(key)) ||  (i.getAddress().contains(key))) {
-    //            result.add(i);
-   //         }
-   //     }
-//        return result;
- //   }
 
 
 
